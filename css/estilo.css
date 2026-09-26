@@ -1,0 +1,636 @@
+/* ==========================================================================
+   1. IDENTIDADE VISUAL & HARMONIA DE CORES POR MÓDULO
+   ========================================================================== */
+
+:root {
+    --color-verde-base: #115E53;
+    --color-text-dark: #111827;
+
+    --mod1-color: #d7945c; /* Verde Petróleo */
+    --mod2-color: #00c589; /* Azul Petróleo */
+    --mod3-color: #26a483; /* Verde Oliva Profundo */
+    --mod4-color: #205758; /* Azul Profundo */
+
+    --mod-active-color: var(--color-verde-base);
+}
+
+body, p, div, span, button, a, li {
+    font-family: 'Corbel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-dark);
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    text-align: justify;
+}
+
+h3 {
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: var(--mod-active-color);
+    margin-top: 10px;
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+h4 {
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+
+.ebrima-num, .page-counter {
+    font-family: 'Ebrima', 'Segoe UI', sans-serif !important;
+    font-weight: bold;
+    color: #115E53;
+    font-size: 12px !important;
+}
+
+body {
+    background-color: #f7f9fa;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 380px;
+    min-width: 380px;
+    height: 100vh;
+    background-color: var(--mod-active-color);
+    position: relative;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/fotos/grafismo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+#sidebar.collapsed-sidebar {
+    margin-left: -380px;
+}
+
+.sidebar-header {
+    padding: 18px 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 16px !important;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-transform: capitalize !important;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+.sidebar-header span {
+    font-size: 18px !important;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.toggle-sidebar-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menuPrincipal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    min-height: calc(100vh - 60px);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.menuPrincipal li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px !important;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s;
+    text-align: left;
+}
+
+.menuPrincipal li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menuPrincipal li.active > a {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    font-weight: bold !important;
+    border-left: 6px solid #79f2e6;
+    color: #ffffff !important;
+}
+
+.icon-check {
+    color: #79f2e6;
+    float: right;
+    font-size: 18px;
+}
+
+.menuPrincipal ul.nivel2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menuPrincipal ul.nivel2 li a {
+    padding: 12px 20px 12px 30px;
+    font-size: 16px !important;
+    color: #e2e8f0;
+    font-weight: bold;
+}
+
+.menuPrincipal ul.nivel3 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menuPrincipal ul.nivel3 li a {
+    padding: 10px 15px 10px 45px;
+    font-size: 14px !important;
+    color: #cbd5e1;
+    font-weight: normal;
+}
+
+#content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top-menu-toggle-btn {
+    background: none;
+    border: none;
+    color: #115E53;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 15px;
+    display: none;
+    align-items: center;
+}
+
+#sidebar.collapsed-sidebar ~ #content .top-menu-toggle-btn {
+    display: inline-block;
+}
+
+.top-sub-bar {
+    padding: 18px 25px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.top-bar-inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.grafismo-bg-header {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 450px;
+    pointer-events: none;
+    opacity: 0.20; /* Deixa a marca d'água mais suave */
+    background-image: url("/fotos/grafismo.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    
+    /* Cria um fade suave (transparência) da esquerda para a direita para não cortar o desenho seco */
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+}
+
+.curso-title-label {
+    font-weight: bold;
+    color: #115E53 !important;
+    font-size: 17px !important;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.links-superior {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.links-superior a {
+    color: #115E53 !important;
+    font-size: 16px !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.links-superior a:hover {
+    text-decoration: underline;
+}
+
+.page-title-bar {
+    padding: 15px 25px;
+    border-bottom: 3px solid var(--mod-active-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha pelo topo caso o título quebre linha */
+    background-color: #f8fafc;
+    flex-shrink: 0;
+    transition: border-color 0.3s ease;
+    gap: 20px; /* Garante um respiro entre o título e a paginação */
+    
+}
+
+.page-title-bar h2 {
+    margin: 0;
+    font-size: 24px !important;
+    color: var(--mod-active-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    flex-grow: 1; /* Faz o título ocupar o espaço disponível de forma inteligente */
+    min-width: 0; /* Permite que o texto quebre corretamente sem estourar o container */
+    
+}
+
+.page-counter {
+    white-space: nowrap; /* Impede que o "Página X / Y" quebre a linha no meio */
+    font-size: 12px !important;
+    color: var(--mod-active-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    flex-shrink: 0; /* Impede que o contador seja espremido */
+
+}
+
+.scrollable-content-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    background-color: #fbf9f5;
+}
+
+.main-body-content {
+    padding: 40px 70px;
+    max-width: 1150px;
+    margin: 0 auto;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.infografico-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    line-height: 1.6;
+}
+
+.card-visual-destaque,
+.questao-card,
+.reflexao-box,
+.personagem-card,
+.objetivo-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    line-height: 1.6;
+}
+
+
+.objetivo-box-logo {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start; /* Alinha todos os elementos pelo topo */
+    gap: 30px;               /* Dá um espaçamento generoso entre as 3 partes */
+    padding: 25px;           /* Espaçamento interno do card branco */
+    background-color: #fff;  /* Fundo branco como na imagem */
+    border: 1px solid #eee;  /* Borda suave */
+    border-radius: 8px;      /* Cantos arredondados do card */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra leve do card */
+}
+
+/* Controla o tamanho e proporção da logo */
+.logo-apresentacao-container {
+    flex-shrink: 0;          /* Impede a imagem de amassar */
+    max-width: 140px;        /* Tamanho estimado da logo na imagem */
+}
+
+.logo-apresentacao-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Configuração do título (coluna do meio) */
+.objetivo-box h4 {
+    margin-bottom: 12px !important; /* Controla o espaço exato entre o título e o texto */
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    min-width: 100px;        /* Garante que o título quebre em duas linhas se necessário */
+    flex-shrink: 0;          /* Impede o título de ser esmagado pelo texto longo */
+}
+
+/* Configuração do parágrafo (coluna da direita) */
+.objetivo-box p {
+    margin: 0;
+    font-size: 0.95rem;      /* Tamanho de fonte similar ao da imagem */
+    line-height: 1.5;        /* Espaçamento legível entre as linhas do texto */
+    color: #333;             /* Cor do texto ligeiramente suave */
+}
+
+
+.nav-side-btn {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 100px;
+    background-color: var(--mod-active-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    font-size: 24px;
+    transition: background-color 0.3s ease, opacity 0.2s;
+}
+
+.nav-side-btn:hover {
+    opacity: 0.9;
+}
+
+.nav-side-btn.disabled {
+    background-color: #d1d5db !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.nav-prev-bubble {
+    left: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.nav-next-bubble {
+    right: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.personagem-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.personagem-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.personagem-img {
+    width: 120px; /* ou o tamanho que estiver configurado */
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.personagem-info h4 {
+    margin-top: 0;
+    color: var(--mod-active-color);
+    font-size: 21px !important;
+}
+
+.infografico-circulo-wrapper {
+    position: relative;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.circulo-central-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #b5a43b;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.btn-infox {
+    background-color: #0F4C5C;
+    color: #ffffff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-size: 18px !important;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn-infox:hover {
+    background-color: #115E53;
+    color: #ffffff;
+    opacity: 0.95;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    body {
+        overflow: auto;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 340px;
+        max-width: 85vw;
+        height: 100vh;
+        margin-left: -100%;
+        z-index: 2000;
+    }
+
+    #sidebar.open-mobile {
+        margin-left: 0;
+    }
+
+    #content {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .top-menu-toggle-btn {
+        display: inline-block !important;
+    }
+
+    .main-body-content {
+        padding: 30px 20px;
+    }
+
+    .personagem-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-side-btn {
+        position: fixed; /* Fixa na tela do dispositivo, acompanhando a rolagem */
+        top: 50%;        /* Fica exatamente no meio vertical da tela do celular */
+        height: 70px;    /* Reduz levemente a altura para economizar espaço lateral no mobile */
+        width: 35px;     /* Reduz a largura */
+        font-size: 18px;
+        z-index: 2500;   /* Garante que fique acima de outros elementos flutuantes */
+    }
+}
+
+/* CAIXA DESAFIO */
+.pergunta-desafio-box {
+    background: #f1f5f9;
+    border: 2px solid #115E53;
+    border-radius: 12px;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.pergunta-desafio-header {
+    background: var(--mod-active-color);
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pergunta-desafio-header span {
+    color: #ffffff;
+}
+
+.pergunta-desafio-lista {
+    padding: 25px;
+    list-style: none;
+    margin: 0;
+}
+
+.pergunta-desafio-lista li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1e293b;
+}
+
+.pergunta-desafio-lista li:last-child {
+    margin-bottom: 0;
+}
+
+.pergunta-icone-circulo {
+    background: var(--mod-active-color);
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Altera a cor do texto e dos ícones da sanfona da Estrutura do Curso para branco */
+#accordionEstruturaCurso .panel-heading a,
+#accordionEstruturaCurso .panel-heading a span,
+#accordionEstruturaCurso .panel-heading a i {
+    color: #ffffff !important;
+}
+
+.panel-title .button .span {
+    color: #ffffff !important;
+}
+

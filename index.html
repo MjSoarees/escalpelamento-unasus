@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelos Caminhos das Águas</title>
+
+    <!-- Bootstrap 3 & Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Arquivo CSS Externo -->
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- SIDEBAR -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <span>MENU DE TÓPICOS</span>
+                <button class="toggle-sidebar-btn" onclick="alternarMenuLateral()" title="Recolher menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="menuPrincipal" id="menuModulos">
+                <li id="nav-progresso">
+                    <a href="#" onclick="mudarSecao('progresso'); mudarCorModulo('#115E53');">Acompanhe seu
+                        progresso</a>
+                </li>
+                <li id="nav-apresentacao" class="active">
+                    <a href="#" onclick="mudarSecao('apresentacao'); mudarCorModulo('#115E53');">Apresentação <i
+                            class="fa fa-check icon-check" id="chk-apresentacao" style="display:none;"></i></a>
+                </li>
+                <li id="nav-conhecendo">
+                    <a href="#" onclick="mudarSecao('conhecendo'); mudarCorModulo('#115E53');">Conhecendo o Território
+                        <i class="fa fa-check icon-check" id="chk-conhecendo" style="display:none;"></i></a>
+                </li>
+
+               <!-- MÓDULO 1 -->
+             <li>
+                 <a href="javascript:void(0);" onclick="$('#menuModulos .nivel2').collapse('hide'); $('#collapseMod1').collapse('show'); mudarSecao('m1_apresentacao');">
+                     <i class="fa fa-chevron-right icon-arrow"></i> Módulo 1
+                 </a>
+                 <ul class="collapse nivel2" id="collapseMod1">
+                     <li id="nav-m1_apresentacao">
+                         <a href="#" onclick="mudarSecao('m1_apresentacao');"><i class="fa fa-file-text-o"></i> Apresentação do Módulo</a>
+                     </li>
+                     <li id="nav-m1_contexto">
+                         <a href="#" onclick="mudarSecao('m1_contexto');"><i class="fa fa-book"></i> Contexto</a>
+                     </li>
+                     <li>
+                         <a href="#collapseM1U1" data-toggle="collapse">Unidade 1</a>
+                         <ul class="collapse nivel3" id="collapseM1U1">
+                             <li><a href="#" onclick="mudarSecao('m1u1_t1');">Populações do campo, floresta e águas (CFA) e PCTs</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u1_t2');">Territórios, maretórios e modos de vida</a></li>
+                             <!-- <li><a href="#" onclick="mudarSecao('m1u1_t3');">Trabalho, mobilidade fluvial e vulnerabilidades sociais</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u1_t4');">Escalpelamento: conceito, causas e contextos</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u1_t5');">Acidentes em embarcações e ambiente doméstico</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u1_t6');">Impactos físicos, sociais, culturais e econômicos</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u1_t7');">Determinantes e determinação social da saúde</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u1_t8');">Relação entre território, trabalho e saúde</a></li> -->
+                         </ul>
+                     </li>
+                     <li>
+                         <a href="#collapseM1U2" data-toggle="collapse">Unidade 2</a>
+                         <ul class="collapse nivel3" id="collapseM1U2">
+                             <li><a href="#" onclick="mudarSecao('m1u2_t1');">Perfil epidemiológico das vítimas</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t2');">Mulheres, meninas e desigualdades de gênero</a></li>
+                             <!-- <li><a href="#" onclick="mudarSecao('m1u2_t3');">Divisão sexual do trabalho</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t4');">Impactos sobre corpo, autoestima e vida social</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t5');">Racismo, pobreza e desigualdades territoriais</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t6');">Vigilância epidemiológica e notificações</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t7');">Sistemas de informação em saúde (SIA, SIM, SIH)</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t8');">Importância do quesito raça/cor</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t9');">Monitoramento do SINAN</a></li>
+                             <li><a href="#" onclick="mudarSecao('m1u2_t10');">Utilização das fichas de investigação</a></li> -->
+                         </ul>
+                     </li>
+                 </ul>
+             </li>
+
+             <!-- MÓDULO 2 -->
+             <li>
+                 <a href="javascript:void(0);" onclick="$('#menuModulos .nivel2').collapse('hide'); $('#collapseMod2').collapse('show'); mudarSecao('m2_apresentacao');">
+                     <i class="fa fa-chevron-right icon-arrow"></i> Módulo 2
+                 </a>
+                 <ul class="collapse nivel2" id="collapseMod2">
+                     <li id="nav-m2_apresentacao">
+                         <a href="#" onclick="mudarSecao('m2_apresentacao');"><i class="fa fa-file-text-o"></i> Apresentação do Módulo</a>
+                     </li>
+                     <li id="nav-m2_contexto">
+                         <a href="#" onclick="mudarSecao('m2_contexto');"><i class="fa fa-book"></i> Contexto</a>
+                     </li>
+                     <li>
+                         <a href="#collapseM2U1" data-toggle="collapse">Unidade 1</a>
+                         <ul class="collapse nivel3" id="collapseM2U1">
+                             <li><a href="#" onclick="mudarSecao('m2u1');">Direitos humanos e proteção social</a></li>
+                             <li><a href="#" onclick="mudarSecao('m2u1');">Proteção integral à infância e adolescência</a></li>
+                         </ul>
+                     </li>
+                     <li>
+                         <a href="#collapseM2U2" data-toggle="collapse">Unidade 2</a>
+                         <ul class="collapse nivel3" id="collapseM2U2">
+                             <li><a href="#" onclick="mudarSecao('m2u2');">Legislação e Prevenção</a></li>
+                             <li><a href="#" onclick="mudarSecao('m2u2');">Acesso à saúde, educação e proteção social</a></li>
+                         </ul>
+                     </li>
+                 </ul>
+             </li>
+
+             <!-- MÓDULO 3 -->
+             <li>
+                 <a href="javascript:void(0);" onclick="$('#menuModulos .nivel2').collapse('hide'); $('#collapseMod3').collapse('show'); mudarSecao('m3_apresentacao');">
+                     <i class="fa fa-chevron-right icon-arrow"></i> Módulo 3
+                 </a>
+                 <ul class="collapse nivel2" id="collapseMod3">
+                     <li id="nav-m3_apresentacao">
+                         <a href="#" onclick="mudarSecao('m3_apresentacao');"><i class="fa fa-file-text-o"></i> Apresentação do Módulo</a>
+                     </li>
+                     <li id="nav-m3_contexto">
+                         <a href="#" onclick="mudarSecao('m3_contexto');"><i class="fa fa-book"></i> Contexto</a>
+                     </li>
+                     <li>
+                         <a href="#collapseM3U1" data-toggle="collapse">Unidade 1</a>
+                         <ul class="collapse nivel3" id="collapseM3U1">
+                             <li><a href="#" onclick="mudarSecao('m3u1');">Título do Tópico</a></li>
+                         </ul>
+                     </li>
+                     <li>
+                         <a href="#collapseM3U2" data-toggle="collapse">Unidade 2</a>
+                         <ul class="collapse nivel3" id="collapseM3U2">
+                             <li><a href="#" onclick="mudarSecao('m3u2');">Título do Tópico</a></li>
+                         </ul>
+                     </li>
+                 </ul>
+             </li>
+
+             <!-- MÓDULO 4 -->
+             <li>
+                 <a href="javascript:void(0);" onclick="$('#menuModulos .nivel2').collapse('hide'); $('#collapseMod4').collapse('show'); mudarSecao('m4_apresentacao');">
+                     <i class="fa fa-chevron-right icon-arrow"></i> Módulo 4
+                 </a>
+                 <ul class="collapse nivel2" id="collapseMod4">
+                     <li id="nav-m4_apresentacao">
+                         <a href="#" onclick="mudarSecao('m4_apresentacao');"><i class="fa fa-file-text-o"></i> Apresentação do Módulo</a>
+                     </li>
+                     <li id="nav-m4_contexto">
+                         <a href="#" onclick="mudarSecao('m4_contexto');"><i class="fa fa-book"></i> Contexto</a>
+                     </li>
+                     <li>
+                         <a href="#collapseM4U1" data-toggle="collapse">Unidade 1</a>
+                         <ul class="collapse nivel3" id="collapseM4U1">
+                             <li><a href="#" onclick="mudarSecao('m4u1');">Promoção da saúde nos territórios ribeirinhos</a></li>
+                         </ul>
+                     </li>
+                 </ul>
+             </li>
+
+                <li id="nav-comentario">
+                    <a href="#" onclick="mudarSecao('comentario'); mudarCorModulo('#115E53');">Comentário final</a>
+                </li>
+                <li id="nav-ebooks">
+                    <a href="#" onclick="mudarSecao('ebooks'); mudarCorModulo('#115E53');">E-books e Materiais</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- ÁREA PRINCIPAL -->
+        <div id="content">
+            <div class="nav-side-btn nav-prev-bubble" id="btnAnterior" onclick="passoAnterior()"
+                title="Página anterior">
+                <i class="fa fa-chevron-left"></i>
+            </div>
+            <div class="nav-side-btn nav-next-bubble" id="btnProxima" onclick="proximoPasso()" title="Próxima página">
+                <i class="fa fa-chevron-right"></i>
+            </div>
+
+            <div class="top-sub-bar">
+                <div class="grafismo-bg-header"></div>
+                <div class="top-bar-inner">
+                    <button class="top-menu-toggle-btn" onclick="alternarMenuLateral()" title="Abrir menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="curso-title-label">
+                        PELOS CAMINHOS DAS ÁGUAS: ATENÇÃO INTEGRAL EM SAÚDE PARA POPULAÇÃO EM RISCO OU EM SITUAÇÃO DE
+                        ESCALPELAMENTO
+                    </div>
+                </div>
+                <div class="links-superior">
+                    <a href="#" data-toggle="modal" data-target="#modalInfo">Objetivos</a>
+                    <a href="#" data-toggle="modal" data-target="#modalInfo">Guia de navegação</a>
+                    <a href="#" data-toggle="modal" data-target="#modalInfo">Glossário geral</a>
+                    <a href="#" data-toggle="modal" data-target="#modalInfo">Leitura recomendada</a>
+                </div>
+            </div>
+
+            <div class="page-title-bar">
+                <h2 id="tituloAba">Apresentação</h2>
+                <span class="page-counter">Página <span class="ebrima-num" id="paginaAtual">1</span> / <span
+                        class="ebrima-num" id="totalPaginas">1</span></span>
+            </div>
+
+            <div class="scrollable-content-area" id="scrollArea">
+                <div class="main-body-content" id="painelConteudo">
+                    <!-- Conteúdo dinâmico -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL GERAL / POP-UP DO TERRITÓRIO -->
+    <div class="modal fade" id="modalTerritorioPopup" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" style="border-radius: 8px; border: none;">
+                <div class="modal-header"
+                    style="background: var(--mod-active-color); color: #fff; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                    <button type="button" class="close" data-dismiss="modal"
+                        style="color: #fff; opacity: 1;">&times;</button>
+                    <h4 class="modal-title" id="modalTerritorioTitulo" style="font-weight: bold;">Informação do
+                        Território</h4>
+                </div>
+                <div class="modal-body" id="modalTerritorioTexto"
+                    style="padding: 30px; font-size: 20px; line-height: 1.8;">
+                    <!-- Conteúdo injetado via JS -->
+                </div>
+                <div class="modal-footer"
+                    style="background: #f8fafc; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                        style="font-weight: bold; padding: 10px 20px;">Fechar [X]</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
