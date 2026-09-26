@@ -267,9 +267,9 @@ const secoesCurso = [
                     <p>O município reúne área urbana, comunidades ribeirinhas, comunidades indígenas e pequenas localidades distribuídas ao longo dos rios e igarapés. As atividades econômicas incluem pesca, agricultura familiar, extrativismo, produção de farinha, comércio local e transporte fluvial.</p>
 
                     <div class="infografico-container" style="max-width: 900px; margin: 30px auto;">
-                        <p style="text-align:center; font-style:italic; margin-top:12px; color:#555;"><b>Mapa geográfico e demográfico:</b> Vila do Arari e suas comunidades.</p>
+                        <p style="text-align:center; margin-top:12px; color:#555; font-weight: normal !important;">Mapa geográfico e demográfico: Vila do Arari e suas comunidades</p>
                         <img src="./fotos/mapa.jpg" alt="Mapa de Vila do Arari" style="width:100%; border-radius:6px; display:block;">
-                        <p style="text-align:center; font-style:italic; margin-top:12px; color:#555;"><b>Fonte: Elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
+                        <p style="text-align:center; margin-top:12px; color:#555; font-weight: normal !important;"><b>Fonte:</b> elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
                     </div>
 
                     <br>
@@ -291,7 +291,7 @@ const secoesCurso = [
                 header: 'Conhecendo o território',
                 html: `
 
-                <h3>Conhecendo o Território: Vila Arari</h3> 
+                <h3>Conhecendo o Território: Vila do Arari</h3> 
                 <p>A distância entre as comunidades e a sede municipal interfere no acesso aos serviços públicos. Em determinadas localidades, o deslocamento até uma unidade de saúde pode exigir horas de viagem. Durante o período de cheia, algumas rotas ficam mais extensas; na estiagem, determinados trechos tornam-se mais difíceis para a navegação.</p>
                 
                 <p>A mobilidade fluvial também faz parte da rotina das crianças e adolescentes. Meninas e mulheres participam de diferentes atividades familiares, produtivas e comunitárias e utilizam as embarcações para deslocamentos cotidianos.</p>
@@ -301,9 +301,9 @@ const secoesCurso = [
                 <p>O município conta com serviços de Atenção Primária à Saúde, uma unidade hospitalar de pequeno porte e equipes que percorrem comunidades rurais e ribeirinhas. Entretanto, situações que exigem atendimento especializado precisam ser encaminhadas para outro município, aumentando o tempo de deslocamento e criando desafios para a continuidade do cuidado.</p>
                 
                 <div class="infografico-container" style="max-width: 900px; margin: 30px auto;">
-                        <p style="text-align:center; font-style:italic; margin-top:12px; color:#555;"><b>Representação digital de estudante ribeirinha em canoa na Vila do Arari..</p>
+                        <p style="text-align:center; margin-top:12px; color:#555;">Representação de estudante ribeirinha em canoa na Vila do Arari..</p>
                         <img src="./fotos/ribeirinhos.jpg" alt="Mapa de Vila do Arari" style="width:100%; border-radius:6px; display:block;">
-                        <p style="text-align:center; font-style:italic; margin-top:12px; color:#555;"><b>Fonte: Elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
+                        <p style="text-align:center; margin-top:12px; color:#555;"><b>Fonte:</b> elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
                     </div>
 
                 <h3>Os personagens desta história</h3> 
@@ -674,7 +674,7 @@ const secoesCurso = [
         modulo: 'mod3',
         paginas: [
             {
-                header: 'MÓDULO 3 | Saúde mental e atenção psicossocial às pessoas vítimas de escalpelamento',
+                header: 'Apresentação do Módulo ',
                 html: `
                     <div class="objetivo-box">
                         <h4 style="margin-top:0; color:var(--mod-active-color);">Objetivo de aprendizagem do módulo</h4>
@@ -736,7 +736,7 @@ const secoesCurso = [
         modulo: 'mod3',
         paginas: [
             {
-                header: 'Módulo 3 | Unidade 1<br>Título do Tópico',
+                header: 'Unidade 1',
                 html: `<h3>Conteúdo do novo módulo</h3><p>Texto da página...</p>`
             }
         ]
@@ -751,7 +751,7 @@ const secoesCurso = [
         modulo: 'mod4',
         paginas: [
             {
-                header: 'MÓDULO 4 | Prevenção, acolhimento e coordenação do cuidado na Rede de Atenção à Saúde nos territórios das águas',
+                header: 'Apresentação do Módulo ',
                 html: `
                     <div class="objetivo-box">
                         <h4 style="margin-top:0; color:var(--mod-active-color);">Objetivo de aprendizagem do módulo</h4>
@@ -815,7 +815,7 @@ const secoesCurso = [
         modulo: 'mod4',
         paginas: [
             {
-                header: 'Módulo 4 | Unidade 1<br>Título do Tópico',
+                header: 'Apresentação',
                 html: `<h3>Conteúdo do novo módulo</h3><p>Texto da página...</p>`
             }
         ]
@@ -919,7 +919,7 @@ function renderizarAtual() {
     const pagina = secao.paginas[paginaInternaIndex];
 
     let corAtual = '#115E53';
-    if (secao.modulo === 'mod1') corAtual = '#115E53;';
+    if (secao.modulo === 'mod1') corAtual = '#115E53';
     else if (secao.modulo === 'mod2') corAtual = '#205758' ;
     else if (secao.modulo === 'mod3') corAtual =  '#0f4c5c';
     else if (secao.modulo === 'mod4') corAtual = '#365314';

@@ -6,7 +6,7 @@
     --color-verde-base: #115E53;
     --color-text-dark: #111827;
 
-    --mod1-color: #d7945c; /* Verde Petróleo */
+    --mod1-color: #115E53; /* Verde Petróleo */
     --mod2-color: #00c589; /* Azul Petróleo */
     --mod3-color: #26a483; /* Verde Oliva Profundo */
     --mod4-color: #205758; /* Azul Profundo */
@@ -333,6 +333,10 @@ body {
     margin-bottom: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     line-height: 1.6;
+}
+
+.infografico-container{
+    
 }
 
 .card-visual-destaque,
