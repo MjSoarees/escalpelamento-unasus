@@ -437,7 +437,7 @@ const secoesCurso = [
     {
         id: 'm1_apresentacao',
 
-        titulo: 'MÓDULO 1 | Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica',
+        titulo: 'Módulo 1 | Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica',
         modulo: 'mod1',
         paginas: [
             {
@@ -932,16 +932,16 @@ function renderizarAtual() {
         let nomeModuloTexto = "";
 
         // Define o texto base superior de acordo com o módulo
-        if (secao.modulo === 'mod1') nomeModuloTexto = "MÓDULO 1 | Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica";
-        else if (secao.modulo === 'mod2') nomeModuloTexto = "MÓDULO 2 | Direitos, proteção social e políticas públicas às pessoas em risco ou em situação de escalpelamento";
-        else if (secao.modulo === 'mod3') nomeModuloTexto = "MÓDULO 3 | Saúde mental e atenção psicossocial às pessoas vítimas de escalpelamento";
-        else if (secao.modulo === 'mod4') nomeModuloTexto = "Módulo 4 | Prevenção, acolhimento e coordenação do cuidado na Rede de Atenção à Saúde nos territórios das águas";
+        if (secao.modulo === 'mod1') nomeModuloTexto = "Módulo 1 - Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica";
+        else if (secao.modulo === 'mod2') nomeModuloTexto = "Módulo 2 - Direitos, proteção social e políticas públicas às pessoas em risco ou em situação de escalpelamento";
+        else if (secao.modulo === 'mod3') nomeModuloTexto = "Módulo 3 - Saúde mental e atenção psicossocial às pessoas vítimas de escalpelamento";
+        else if (secao.modulo === 'mod4') nomeModuloTexto = "Módulo 4 - Prevenção, acolhimento e coordenação do cuidado na Rede de Atenção à Saúde nos territórios das águas";
         else nomeModuloTexto = "Curso";
 
         // Se estiver dentro de um módulo, exibe o nome do módulo em cima (suave/opaco) e o título embaixo em destaque com a cor do tema
         if (secao.modulo && secao.modulo !== 'base') {
             elSubtitulo.innerHTML = `
-                <div style="font-size: 12px !important; font-weight: normal; margin-bottom: 2px; color: rgba(0, 0, 0, 0.65); text-transform: uppercase;">${nomeModuloTexto}</div>
+                <div class="primeira-maiuscula" style="font-size: 18px !important; font-weight: normal; margin-bottom: 2px; color: rgba(0, 0, 0, 0.65); ">${nomeModuloTexto}</div>
                 <div style="font-size: 22px !important; font-weight: bold; color: var(--mod-active-color);">${pagina.header || secao.titulo}</div>
             `;
         } else {
