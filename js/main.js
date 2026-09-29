@@ -53,7 +53,7 @@ const secoesCurso = [
                         <!-- MÓDULO 1 -->
                         <div class="panel panel-default estrutura-panel-item">
                             <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
-                                <h4 class="panel-title estrutura-panel-title-reset">
+                                <h4 class="panel-title estrutura-panel-title-reset-acordion">
                                     <a role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod1Sanfona" aria-expanded="false" class="estrutura-link-sanfona">
                                         <i class="fa fa-plus estrutura-icone-mais"></i>
                                         <span>Módulo 1 | Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica</span>
@@ -100,7 +100,7 @@ const secoesCurso = [
                         <!-- MÓDULO 2 -->
                         <div class="panel panel-default estrutura-panel-item">
                             <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
-                                <h4 class="panel-title estrutura-panel-title-reset">
+                                <h4 class="panel-title estrutura-panel-title-reset-acordion">
                                     <a class="collapsed estrutura-link-sanfona" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod2Sanfona" aria-expanded="false">
                                         <i class="fa fa-plus estrutura-icone-mais-mod2"></i>
                                         <span>Módulo 2 | Direitos, proteção social e políticas públicas às pessoas em risco ou em situação de escalpelamento</span>
@@ -146,7 +146,7 @@ const secoesCurso = [
                         <!-- MÓDULO 3 -->
                         <div class="panel panel-default estrutura-panel-item">
                             <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
-                                <h4 class="panel-title estrutura-panel-title-reset">
+                                <h4 class="panel-title estrutura-panel-title-reset-acordion">
                                     <a class="collapsed estrutura-link-sanfona" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod3Sanfona" aria-expanded="false">
                                         <i class="fa fa-plus estrutura-icone-mais-mod2"></i>
                                         <span>Módulo 3 | Saúde mental e atenção psicossocial às pessoas vítimas de escalpelamento</span>
@@ -191,7 +191,7 @@ const secoesCurso = [
                         <!-- MÓDULO 4 -->
                         <div class="panel panel-default estrutura-panel-item">
                             <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
-                                <h4 class="panel-title estrutura-panel-title-reset">
+                                <h4 class="panel-title estrutura-panel-title-reset-acordion">
                                     <a class="collapsed estrutura-link-sanfona" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod4Sanfona" aria-expanded="false">
                                         <i class="fa fa-plus estrutura-icone-mais-mod2"></i>
                                         <span>Módulo 4 | Prevenção, acolhimento e coordenação do cuidado na rede de atenção à saúde nos territórios das águas</span>
@@ -438,26 +438,30 @@ const secoesCurso = [
                     <p>Raimundo explica que a embarcação é sua principal fonte de renda e que a adaptação do motor representa um custo que ele não consegue assumir naquele momento.</p>
                     <p>A equipe precisa compreender como aquele risco se constituiu e quais fatores do território contribuem para sua permanência.</p>
                     
-                    <div class="caixa-pergunta-imagem">
-                        <ul>
-                            <li>
-                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                                <div>Quais situações presentes no território de Vila do Arari podem aumentar o risco de ocorrência de escalpelamento?</div>
-                            </li>
-                            <li>
-                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                                <div>Como as características dos territórios das águas, os modos de vida, o trabalho e a mobilidade fluvial se relacionam com o risco de escalpelamento?</div>
-                            </li>
-                            <li>
-                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                                <div>De que maneira gênero, idade, condições sociais e características das atividades realizadas no território podem interferir na exposição ao risco?</div>
-                            </li>
-                            <li>
-                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                                <div>Como a vigilância em saúde pode reconhecer e acompanhar situações de risco para orientar ações de prevenção no território?</div>
-                            </li>
-                        </ul>
-                    </div>
+
+                    
+                    // <div class="card-container">
+                    // <!-- Imagem recortada do topo com as ondinhas e ícones originais -->
+                    //      <img src="cabecalho-ondas.png" alt="Abas e Ondas do Desafio" class="card-header-img">
+                    //     <ul>
+                    //         <li>
+                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
+                    //             <div>Quais situações presentes no território de Vila do Arari podem aumentar o risco de ocorrência de escalpelamento?</div>
+                    //         </li>
+                    //         <li>
+                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
+                    //             <div>Como as características dos territórios das águas, os modos de vida, o trabalho e a mobilidade fluvial se relacionam com o risco de escalpelamento?</div>
+                    //         </li>
+                    //         <li>
+                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
+                    //             <div>De que maneira gênero, idade, condições sociais e características das atividades realizadas no território podem interferir na exposição ao risco?</div>
+                    //         </li>
+                    //         <li>
+                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
+                    //             <div>Como a vigilância em saúde pode reconhecer e acompanhar situações de risco para orientar ações de prevenção no território?</div>
+                    //         </li>
+                    //     </ul>
+                    // </div>
                 `
             }
         ]
@@ -789,7 +793,8 @@ let paginaInternaIndex = 0;
 let progressoConcluido = JSON.parse(localStorage.getItem('curso_progresso')) || {};
 
 function alternarMenuLateral() {
-    if ($(window).width() <= 991) {$('#sidebar').toggleClass('open-mobile');
+    if ($(window).width() <= 991) {
+        $('#sidebar').toggleClass('open-mobile');
     } else {
         $('#sidebar').toggleClass('collapsed-sidebar');
     }
@@ -878,14 +883,14 @@ function renderizarAtual() {
             elSubtitulo.innerHTML = `<div class="cabecalho-pagina-destaque">${secao.titulo}</div>`;
         }
         const areaRolagem = document.querySelector('.scrollable-content-area');
-    if (areaRolagem) {
-        areaRolagem.scrollTop = 0;
-    }
-    window.scrollTo(0, 0); // Para garantir também no corpo geral caso esteja em modo mobile/responsivo
-    // ==========================================
+        if (areaRolagem) {
+            areaRolagem.scrollTop = 0;
+        }
+        window.scrollTo(0, 0); // Para garantir também no corpo geral caso esteja em modo mobile/responsivo
+        // ==========================================
 
-    const desativarAnterior = (secaoAtualIndex === 0 && paginaInternaIndex === 0);
-    document.getElementById('btnAnterior').classList.toggle('disabled', desativarAnterior);
+        const desativarAnterior = (secaoAtualIndex === 0 && paginaInternaIndex === 0);
+        document.getElementById('btnAnterior').classList.toggle('disabled', desativarAnterior);
     }
 
     document.getElementById('paginaAtual').innerText = paginaInternaIndex + 1;
@@ -915,7 +920,7 @@ function renderizarAtual() {
     }
 
     if (elMenu) {
-        const $el = $(elMenu);$el.addClass('active');
+        const $el = $(elMenu); $el.addClass('active');
 
         let submenuPai = $el.closest('.collapse');
         if (submenuPai.length > 0) {
@@ -1222,7 +1227,8 @@ function atualizarPainelProgressoVisual() {
 
 
 
-$(document).ready(function () {$('#menuModulos').on('show.bs.collapse', '.collapse', function (e) {
+$(document).ready(function () {
+    $('#menuModulos').on('show.bs.collapse', '.collapse', function (e) {
         e.stopPropagation();
         if ($(this.parentNode).closest('#menuModulos').length) {
             $(this).closest('ul').find('> li > .collapse.in').not(this).collapse('hide');
