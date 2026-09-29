@@ -7,11 +7,11 @@ const secoesCurso = [
             {
                 header: 'ACOMPANHE SEU PROGRESSO',
                 html: `
-                    <h3 style="margin-top:0;">Seu andamento</h3>
+                    <h3 class="progresso-titulo-principal">Seu andamento</h3>
                     <p><b>Acompanhe seu progresso através dos módulos concluídos:</b></p>
                     <br>
-                    <div style="background:#e2e8f0; border-radius:4px; height:28px; width:100%; margin-bottom:25px; overflow:hidden; position:relative;">
-                        <div id="barraProgressoInterna" style="background:var(--mod-active-color); height:100%; width:0%; transition:width 0.4s ease; display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:bold;" class="ebrima-num">0%</div>
+                    <div class="progresso-barra-wrapper">
+                        <div id="barraProgressoInterna" class="ebrima-num progresso-barra-fill-dinamica" style="width:0%;">0%</div>
                     </div>
                     <div id="listaProgressoCards"></div>
                 `
@@ -27,50 +27,43 @@ const secoesCurso = [
                 header: 'Apresentação',
                 html: `
                     <p>Olá! Seja bem-vindo(a) ao recurso educacional <b>“Pelos Caminhos das Águas: Atenção Integral em Saúde para População em Risco ou em Situação de Escalpelamento”</b>.</p>
+                    <p>Os territórios das águas são marcados por diferentes formas de viver, trabalhar, circular e produzir saúde. Em muitos deles, as embarcações fazem parte da rotina das comunidades e são utilizadas para o deslocamento até a escola, o trabalho, os serviços de saúde, os mercados e outras localidades. Nesse contexto, a segurança das embarcações e a organização da rede de atenção à saúde assumem papel importante na prevenção de acidentes e no cuidado às pessoas afetadas.</p>
+                    <p>O escalpelamento é uma das consequências mais graves de acidentes envolvendo partes móveis de embarcações e outras máquinas. Embora o fenômeno esteja relacionado a diferentes contextos socioprodutivos, sua ocorrência nos territórios das águas envolve características territoriais, sociais, econômicas, culturais e de gênero que precisam ser consideradas nas ações de prevenção e cuidado.</p>
+                    <p>Este recurso educacional foi elaborado para qualificar profissionais de saúde, gestores públicos, educadores, lideranças comunitárias e sociedade civil sobre prevenção, atenção integral, vigilância e promoção de direitos das pessoas em risco ou em situação de escalpelamento, considerando as especificidades socioculturais e territoriais, com destaque para povos indígenas e população do campo, floresta e água.</p>
+                    <p>Este material foi elaborado para qualificar profissionais de saúde, gestores, lideranças comunitárias e outros atores sociais para reconhecer situações de risco, fortalecer ações de prevenção, acolher pessoas em situação de escalpelamento, organizar o cuidado e articular a rede de atenção à saúde.</p>
+                    <p>Ao longo da jornada, você acompanhará a realidade de um município fictício da região amazônica e conhecerá pessoas que vivem, trabalham e atuam nesse território. A partir das situações enfrentadas por elas, serão discutidos aspectos relacionados ao escalpelamento, aos direitos, à saúde mental, à prevenção e à organização do cuidado.</p>
+                    <p>Prepare-se para percorrer esse território, conhecer seus caminhos e compreender como diferentes setores podem atuar na proteção da saúde das populações das águas.</p>
                     
-                    <p>Os territórios das águas são marcados por diferentes formas de viver, trabalhar, circular e produzir saúde. Em muitos deles, as embarcações fazem parte da rotina das comunidades e são utilizadas para o deslocamento até a escola, o trabalho, os serviços de saúde, os mercados e outras localidades. Nesse contexto, a segurança das embarcações e a organização da rede de atenção à saúde assumem papel importante na prevenção de acidentes e no cuidado às pessoas afetadas.</b>.</p>
-                    <p>O escalpelamento é uma das consequências mais graves de acidentes envolvendo partes móveis de embarcações e outras máquinas. Embora o fenômeno esteja relacionado a diferentes contextos socioprodutivos, sua ocorrência nos territórios das águas envolve características territoriais, sociais, econômicas, culturais e de gênero que precisam ser consideradas nas ações de prevenção e cuidado.</p>                    
-                    <p> Este recurso educacional foi elaborado para qualificar profissionais de saúde, gestores públicos, educadores, lideranças comunitárias e sociedade civil sobre prevenção, atenção integral, vigilância e promoção de direitos das pessoas em risco ou em situação de escalpelamento, considerando as especificidades socioculturais e territoriais, com destaque para povos indígenas e população do campo, floresta e água.</p>
-                    <p> Este material foi elaborado para qualificar profissionais de saúde, gestores, lideranças comunitárias e outros atores sociais para reconhecer situações de risco, fortalecer ações de prevenção, acolher pessoas em situação de escalpelamento, organizar o cuidado e articular a rede de atenção à saúde. </p>
-                    <p> Ao longo da jornada, você acompanhará a realidade de um município fictício da região amazônica e conhecerá pessoas que vivem, trabalham e atuam nesse território. A partir das situações enfrentadas por elas, serão discutidos aspectos relacionados ao escalpelamento, aos direitos, à saúde mental, à prevenção e à organização do cuidado. </p>
-                   <p> Prepare-se para percorrer esse território, conhecer seus caminhos e compreender como diferentes setores podem atuar na proteção da saúde das populações das águas.</p>
                     <div class="objetivo-box-logo">
-    <!-- Coluna 1: A Logo -->
-    <div class="logo-apresentacao-container">
-        <img src="./fotos/logo2.png" alt="Logo do Curso" onerror="this.src='./fotos/image.png';">
-    </div>
-
-    <!-- Coluna 2: Bloco de Texto (Título + Parágrafo) -->
-    <div class="objetivo-conteudo">
-        <h4 style="margin-top:0; color:var(--mod-active-color);">Objetivo geral</h4>
-        <p style="margin:0;">Qualificar profissionais de saúde, gestores públicos, educadores, lideranças comunitárias e sociedade civil sobre prevenção, atenção integral, vigilância e promoção de direitos das pessoas em risco ou em situação de escalpelamento, considerando as especificidades socioculturais e territoriais, com destaque para povos indígenas e população do campo, floresta e água.</p>
-    </div>
-</div>
-
-                    
+                        <div class="logo-apresentacao-container">
+                            <img src="./fotos/logo2.png" alt="Logo do Curso" onerror="this.src='./fotos/image.png';">
+                        </div>
+                        <div class="objetivo-conteudo">
+                            <h4 class="objetivo-titulo-destaque">Objetivo geral</h4>
+                            <p class="objetivo-texto-limpo">Qualificar profissionais de saúde, gestores públicos, educadores, lideranças comunitárias e sociedade civil sobre prevenção, atenção integral, vigilância e promoção de direitos das pessoas em risco ou em situação de escalpelamento, considerando as especificidades socioculturais e territoriais, com destaque para povos indígenas e população do campo, floresta e água.</p>
+                        </div>
+                    </div>
 
                     <br>
                     <h3>Estrutura do Recurso Educacional</h3>
                     <p>O percurso formativo está estruturado nos seguintes módulos:</p>
 
-                    <!-- SANFONA / ACORDEÃO DOS MÓDULOS -->
-                    <div class="panel-group" id="accordionEstruturaCurso" role="tablist" aria-multiselectable="true" style="margin-top:20px;">
+                    <div class="panel-group estrutura-accordion-grupo" id="accordionEstruturaCurso" role="tablist" aria-multiselectable="true">
                         
                         <!-- MÓDULO 1 -->
-                        <div class="panel panel-default" style="border:none; margin-bottom:12px; border-radius:6px; overflow:hidden;">
-                            <div class="panel-heading" role="tab" style= "background:#115E53; padding:0; border-radius:6px;;">
-                                <h4 class="panel-title" style="margin:0;">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod1Sanfona" aria-expanded="false" style="color:#ffffff !important; font-weight:bold; text-decoration:none; display:flex; align-items:center; padding:18px 20px;">
-                                        <i class="fa fa-plus" style="margin-right:15px; font-size:13px;"></i>
+                        <div class="panel panel-default estrutura-panel-item">
+                            <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
+                                <h4 class="panel-title estrutura-panel-title-reset">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod1Sanfona" aria-expanded="false" class="estrutura-link-sanfona">
+                                        <i class="fa fa-plus estrutura-icone-mais"></i>
                                         <span>Módulo 1 | Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica</span>
                                     </a>
                                 </h4>
                             </div>
                             <div id="mod1Sanfona" class="panel-collapse collapse" role="tabpanel">
-                                <div class="panel-body" style="background:#f8fafc; border:1px solid #cbd5e1; border-top:none; padding:20px;">
+                                <div class="panel-body estrutura-panel-corpo">
                                     <p><b>Objetivo de aprendizagem do módulo:</b> Analisar os contextos socioterritoriais, culturais e de gênero relacionados ao escalpelamento, identificando fatores de vulnerabilidade, impactos à saúde e estratégias de vigilância e prevenção nos territórios das águas.</p>
-                                    <hr style="border-top:1px solid #cbd5e1;">
-                                    
+                                    <hr class="estrutura-hr-divisor">
                                     <p><b>Unidade 1 | Povos das águas, territórios e contextos do escalpelamento</b></p>
                                     <p><b>Objetivo de aprendizagem da unidade:</b> Identificar os principais fatores territoriais, sociais e ambientais associados ao risco de escalpelamento em populações ribeirinhas, indígenas e comunidades tradicionais.</p>
                                     <p><b>Tópicos:</b></p>
@@ -105,20 +98,19 @@ const secoesCurso = [
                         </div>
 
                         <!-- MÓDULO 2 -->
-                        <div class="panel panel-default" style="border:none; margin-bottom:12px; border-radius:6px; overflow:hidden;">
-                            <div class="panel-heading" role="tab" style="background:#115E53; padding:0; border-radius:6px;">
-                                <h4 class="panel-title" style="margin:0;">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod2Sanfona" aria-expanded="false" style="color:#ffffff; font-weight:bold; text-decoration:none; display:flex; align-items:center; padding:18px 20px;">
-                                        <i class="fa fa-plus" style="margin-right:15px; font-size:16px;"></i>
+                        <div class="panel panel-default estrutura-panel-item">
+                            <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
+                                <h4 class="panel-title estrutura-panel-title-reset">
+                                    <a class="collapsed estrutura-link-sanfona" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod2Sanfona" aria-expanded="false">
+                                        <i class="fa fa-plus estrutura-icone-mais-mod2"></i>
                                         <span>Módulo 2 | Direitos, proteção social e políticas públicas às pessoas em risco ou em situação de escalpelamento</span>
                                     </a>
                                 </h4>
                             </div>
                             <div id="mod2Sanfona" class="panel-collapse collapse" role="tabpanel">
-                                <div class="panel-body" style="background:#f8fafc; border:1px solid #cbd5e1; border-top:none; padding:20px;">
+                                <div class="panel-body estrutura-panel-corpo">
                                     <p><b>Objetivo de aprendizagem do módulo:</b> Reconhecer os direitos sociais, humanos e institucionais das vítimas de escalpelamento, compreendendo a atuação das políticas públicas e da rede de proteção social.</p>
-                                    <hr style="border-top:1px solid #cbd5e1;">
-
+                                    <hr class="estrutura-hr-divisor">
                                     <p><b>Unidade 1 | Direitos humanos, proteção integral e justiça social</b></p>
                                     <p><b>Objetivo de aprendizagem da unidade:</b> Analisar os impactos das desigualdades sociais, territoriais e ambientais sobre o acesso a direitos e à proteção integral das populações vulnerabilizadas.</p>
                                     <p><b>Tópicos:</b></p>
@@ -152,20 +144,19 @@ const secoesCurso = [
                         </div>
 
                         <!-- MÓDULO 3 -->
-                        <div class="panel panel-default" style="border:none; margin-bottom:12px; border-radius:6px; overflow:hidden;">
-                            <div class="panel-heading" role="tab" style="background:#115E53; padding:0; border-radius:6px;">
-                                <h4 class="panel-title" style="margin:0;">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod3Sanfona" aria-expanded="false" style="color:#ffffff; font-weight:bold; text-decoration:none; display:flex; align-items:center; padding:18px 20px;">
-                                        <i class="fa fa-plus" style="margin-right:15px; font-size:16px;"></i>
+                        <div class="panel panel-default estrutura-panel-item">
+                            <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
+                                <h4 class="panel-title estrutura-panel-title-reset">
+                                    <a class="collapsed estrutura-link-sanfona" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod3Sanfona" aria-expanded="false">
+                                        <i class="fa fa-plus estrutura-icone-mais-mod2"></i>
                                         <span>Módulo 3 | Saúde mental e atenção psicossocial às pessoas vítimas de escalpelamento</span>
                                     </a>
                                 </h4>
                             </div>
                             <div id="mod3Sanfona" class="panel-collapse collapse" role="tabpanel">
-                                <div class="panel-body" style="background:#f8fafc; border:1px solid #cbd5e1; border-top:none; padding:20px;">
+                                <div class="panel-body estrutura-panel-corpo">
                                     <p><b>Objetivo de aprendizagem do módulo:</b> Reconhecer os impactos psicossociais do escalpelamento e desenvolver estratégias de cuidado integral, acolhimento e reabilitação psicossocial.</p>
-                                    <hr style="border-top:1px solid #cbd5e1;">
-
+                                    <hr class="estrutura-hr-divisor">
                                     <p><b>Unidade 1 | Saúde mental e impactos psicossociais do escalpelamento</b></p>
                                     <p><b>Objetivo de aprendizagem da unidade:</b> Reconhecer os principais impactos psicossociais do escalpelamento e as estratégias de acolhimento e cuidado em saúde mental no SUS.</p>
                                     <p><b>Tópicos:</b></p>
@@ -176,7 +167,7 @@ const secoesCurso = [
                                         <li>Impactos emocionais, sociais e familiares do escalpelamento</li>
                                         <li>Estigma, autoestima, imagem corporal e exclusão social</li>
                                         <li>Acolhimento humanizado e escuta qualificada</li>
-                                        <li>Saúde mental de crianças, adolescentes, idosos e mulheres vítimas (ou nos ciclos de vida)</li>
+                                        <li>Saúde mental de crianças, adolescentes, idosos e mulheres vítimas</li>
                                         <li>Produção do cuidado nos territórios</li>
                                     </ul>
                                     <br>
@@ -198,20 +189,19 @@ const secoesCurso = [
                         </div>
 
                         <!-- MÓDULO 4 -->
-                        <div class="panel panel-default" style="border:none; margin-bottom:12px; border-radius:6px; overflow:hidden;">
-                            <div class="panel-heading" role="tab" style="background:#115E53; padding:0; border-radius:6px;">
-                                <h4 class="panel-title" style="margin:0;">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod4Sanfona" aria-expanded="false" style="color:#ffffff; font-weight:bold; text-decoration:none; display:flex; align-items:center; padding:18px 20px;">
-                                        <i class="fa fa-plus" style="margin-right:15px; font-size:16px;"></i>
+                        <div class="panel panel-default estrutura-panel-item">
+                            <div class="panel-heading estrutura-panel-heading-mod1" role="tab">
+                                <h4 class="panel-title estrutura-panel-title-reset">
+                                    <a class="collapsed estrutura-link-sanfona" role="button" data-toggle="collapse" data-parent="#accordionEstruturaCurso" href="#mod4Sanfona" aria-expanded="false">
+                                        <i class="fa fa-plus estrutura-icone-mais-mod2"></i>
                                         <span>Módulo 4 | Prevenção, acolhimento e coordenação do cuidado na rede de atenção à saúde nos territórios das águas</span>
                                     </a>
                                 </h4>
                             </div>
                             <div id="mod4Sanfona" class="panel-collapse collapse" role="tabpanel">
-                                <div class="panel-body" style="background:#f8fafc; border:1px solid #cbd5e1; border-top:none; padding:20px;">
+                                <div class="panel-body estrutura-panel-corpo">
                                     <p><b>Objetivo de aprendizagem do módulo:</b> Aplicar estratégias de prevenção, acolhimento e coordenação do cuidado às pessoas vítimas de escalpelamento nos diferentes pontos da Rede de Atenção à Saúde.</p>
-                                    <hr style="border-top:1px solid #cbd5e1;">
-
+                                    <hr class="estrutura-hr-divisor">
                                     <p><b>Unidade 1 | Prevenção do escalpelamento e promoção da saúde nos territórios</b></p>
                                     <p><b>Objetivo de aprendizagem da unidade:</b> Planejar ações educativas e preventivas voltadas à promoção da saúde e redução de acidentes relacionados ao escalpelamento.</p>
                                     <p><b>Tópicos:</b></p>
@@ -245,15 +235,10 @@ const secoesCurso = [
                         </div>
 
                     </div>
-                
-                    
-                    `
+                `
             }
         ]
     },
-
-
-
     {
         id: 'conhecendo',
         titulo: 'Conhecendo o Território',
@@ -266,157 +251,143 @@ const secoesCurso = [
                     <p>Vila do Arari é um município amazônico marcado pela presença dos rios e pela mobilidade fluvial. Para parte da população, o barco não é apenas um meio de transporte: é o caminho para chegar à escola, ao trabalho, aos serviços de saúde e aos mercados.</p>
                     <p>O município reúne área urbana, comunidades ribeirinhas, comunidades indígenas e pequenas localidades distribuídas ao longo dos rios e igarapés. As atividades econômicas incluem pesca, agricultura familiar, extrativismo, produção de farinha, comércio local e transporte fluvial.</p>
 
-                    <div class="infografico-container" style="max-width: 900px; margin: 30px auto;">
-                        <p style="text-align:center; margin-top:12px; color:#555; font-weight: normal !important;">Mapa geográfico e demográfico: Vila do Arari e suas comunidades</p>
-                        <img src="./fotos/mapa.jpg" alt="Mapa de Vila do Arari" style="width:100%; border-radius:6px; display:block;">
-                        <p style="text-align:center; margin-top:12px; color:#555; font-weight: normal !important;"><b>Fonte:</b> elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
+                    <div class="infografico-container territorio-bloco-central">
+                        <p class="territorio-legenda-topo">Mapa geográfico e demográfico: Vila do Arari e suas comunidades</p>
+                        <img src="./fotos/mapa.jpg" alt="Mapa de Vila do Arari" class="territorio-img-padrao">
+                        <p class="territorio-legenda-base"><b>Fonte:</b> elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
                     </div>
 
                     <br>
                     <h3>Infográfico do Território</h3>
                     <p><b>Clique em cada item do infográfico abaixo para conhecer as características de Vila do Arari.</b></p>
                     
-                    <div class="infografico-container" style="max-width: 850px; margin: 30px auto; position: relative;">
-                        <img src="./fotos/infografico.png" alt="Infográfico Vila do Arari" style="width: 100%; height: auto; display: block;">
-                        <button onclick="abrirModalTerritorio('gerais')" style="position: absolute; top: 5.5%; left: 36.5%; width: 27.5%; height: 13%; background: rgba(0,0,0,0); border: none; cursor: pointer; border-radius: 50px;" title="Dados gerais"></button>
-                        <button onclick="abrirModalTerritorio('territorio')" style="position: absolute; top: 28%; left: 8.5%; width: 26%; height: 12.5%; background: rgba(0,0,0,0); border: none; cursor: pointer; border-radius: 50px;" title="Território"></button>
-                        <button onclick="abrirModalTerritorio('infraestrutura')" style="position: absolute; top: 26.5%; left: 65.5%; width: 26%; height: 12.5%; background: rgba(0,0,0,0); border: none; cursor: pointer; border-radius: 50px;" title="Infraestrutura"></button>
-                        <button onclick="abrirModalTerritorio('agravantes')" style="position: absolute; top: 61.5%; left: 8.5%; width: 26%; height: 12.5%; background: rgba(0,0,0,0); border: none; cursor: pointer; border-radius: 50px;" title="Agravantes"></button>
-                        <button onclick="abrirModalTerritorio('riscos')" style="position: absolute; top: 61%; left: 65.5%; width: 26%; height: 12.5%; background: rgba(0,0,0,0); border: none; cursor: pointer; border-radius: 50px;" title="Riscos e desafios"></button>
+                    <div class="infografico-container territorio-infografico-wrapper">
+                        <img src="./fotos/infografico.png" alt="Infográfico Vila do Arari" class="territorio-img-padrao">
+                        <button onclick="abrirModalTerritorio('gerais')" class="territorio-btn-hotspot territorio-spot-1" title="Dados gerais"></button>
+                        <button onclick="abrirModalTerritorio('territorio')" class="territorio-btn-hotspot territorio-spot-2" title="Território"></button>
+                        <button onclick="abrirModalTerritorio('infraestrutura')" class="territorio-btn-hotspot territorio-spot-3" title="Infraestrutura"></button>
+                        <button onclick="abrirModalTerritorio('agravantes')" class="territorio-btn-hotspot territorio-spot-4" title="Agravantes"></button>
+                        <button onclick="abrirModalTerritorio('riscos')" class="territorio-btn-hotspot territorio-spot-5" title="Riscos e desafios"></button>
                     </div>
-                   </div> 
-                   `
+                `
             },
             {
                 header: 'Conhecendo o território',
                 html: `
-
-                <h3>Conhecendo o Território: Vila do Arari</h3> 
-                <p>A distância entre as comunidades e a sede municipal interfere no acesso aos serviços públicos. Em determinadas localidades, o deslocamento até uma unidade de saúde pode exigir horas de viagem. Durante o período de cheia, algumas rotas ficam mais extensas; na estiagem, determinados trechos tornam-se mais difíceis para a navegação.</p>
-                
-                <p>A mobilidade fluvial também faz parte da rotina das crianças e adolescentes. Meninas e mulheres participam de diferentes atividades familiares, produtivas e comunitárias e utilizam as embarcações para deslocamentos cotidianos.</p>
-                
-                <p>Nesse cenário, existem embarcações com diferentes condições de conservação e segurança. Parte delas utiliza motores instalados de maneira que deixa componentes móveis acessíveis. Em algumas comunidades, a manutenção é realizada pelos próprios moradores, com recursos limitados e sem acompanhamento técnico regular.</p>
-                
-                <p>O município conta com serviços de Atenção Primária à Saúde, uma unidade hospitalar de pequeno porte e equipes que percorrem comunidades rurais e ribeirinhas. Entretanto, situações que exigem atendimento especializado precisam ser encaminhadas para outro município, aumentando o tempo de deslocamento e criando desafios para a continuidade do cuidado.</p>
-                
-                <div class="infografico-container" style="max-width: 900px; margin: 30px auto;">
-                        <p style="text-align:center; margin-top:12px; color:#555;">Representação de estudante ribeirinha em canoa na Vila do Arari..</p>
-                        <img src="./fotos/ribeirinhos.jpg" alt="Mapa de Vila do Arari" style="width:100%; border-radius:6px; display:block;">
-                        <p style="text-align:center; margin-top:12px; color:#555;"><b>Fonte:</b> elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
+                    <h3>Conhecendo o Território: Vila do Arari</h3> 
+                    <p>A distância entre as comunidades e a sede municipal interfere no acesso aos serviços públicos. Em determinadas localidades, o deslocamento até uma unidade de saúde pode exigir horas de viagem. Durante o período de cheia, algumas rotas ficam mais extensas; na estiagem, determinados trechos tornam-se mais difíceis para a navegação.</p>
+                    <p>A mobilidade fluvial também faz parte da rotina das crianças e adolescentes. Meninas e mulheres participam de diferentes atividades familiares, produtivas e comunitárias e utilizam as embarcações para deslocamentos cotidianos.</p>
+                    <p>Nesse cenário, existem embarcações com diferentes condições de conservação e segurança. Parte delas utiliza motores instalados de maneira que deixa componentes móveis acessíveis. Em algumas comunidades, a manutenção é realizada pelos próprios moradores, com recursos limitados e sem acompanhamento técnico regular.</p>
+                    <p>O município conta com serviços de Atenção Primária à Saúde, uma unidade hospitalar de pequeno porte e equipes que percorrem comunidades rurais e ribeirinhas. Entretanto, situações que exigem atendimento especializado precisam ser encaminhadas para outro município, aumentando o tempo de deslocamento e criando desafios para a continuidade do cuidado.</p>
+                    
+                    <div class="infografico-container territorio-bloco-central">
+                        <p class="territorio-legenda-topo">Representação de estudante ribeirinha em canoa na Vila do Arari.</p>
+                        <img src="./fotos/ribeirinhos.jpg" alt="Mapa de Vila do Arari" class="territorio-img-padrao">
+                        <p class="territorio-legenda-base"><b>Fonte:</b> elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
                     </div>
 
-                <h3>Os personagens desta história</h3> 
-                     <p>Conheça os atores sociais que fazem parte da narrativa em Vila do Arari:</p>
+                    <h3>Os personagens desta história</h3> 
+                    <p>Conheça os atores sociais que fazem parte da narrativa em Vila do Arari:</p>
 
-                     <div class="panel-group" id="accordionUnicoPersonagens" role="tablist" style="margin-top:20px;">
-<div class="panel panel-default" style="border:1px solid #cbd5e1; border-radius:6px; margin-bottom:12px;">
-    <div class="panel-heading" role="tab" style="background:#ffffff; padding:15px 20px; border-radius:6px; ">
-        <h4 class="panel-title" style="margin:0;">
-            <!-- O !important garante que APENAS este texto mude, ignorando a regra geral do body -->
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionUnicoPersonagens" href="#blocoTodosPersonagens" style="color: #000000 !important; font-weight:bold; text-decoration:none; display:flex; justify-content:space-between; align-items:center; font-size: 16px !important;">
-    <span style="color: #115E53 !important; font-size: 16px !important;"><i class="fa fa-users"></i> Clique aqui para ver todos os personagens da história</span>
-    <i class="fa fa-chevron-down"></i>
-</a>
-         </h4>
-    </div>
-                             <div id="blocoTodosPersonagens" class="panel-collapse collapse" role="tabpanel">
-                    <div class="panel-body" style="background:#f8fafc; border-top:1px; padding:25px;">
+                    <div class="panel-group" id="accordionUnicoPersonagens" role="tablist" class="personagens-accordion-grupo">
+                        <div class="panel panel-default personagens-panel-moldura">
+                            <div class="panel-heading personagens-panel-cabecalho" role="tab">
+                                <h4 class="panel-title estrutura-panel-title-reset">
+                                    <a class="collapsed personagens-link-toggle" role="button" data-toggle="collapse" data-parent="#accordionUnicoPersonagens" href="#blocoTodosPersonagens">
+                                        <span class="personagens-span-titulo"><i class="fa fa-users"></i> Clique aqui para ver todos os personagens da história</span>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="blocoTodosPersonagens" class="panel-collapse collapse" role="tabpanel">
+                                <div class="panel-body personagens-panel-corpo">
                                     
                                     <!-- 1. Helena -->
                                     <div class="personagem-card">
                                          <img src="./fotos/Helena.png" alt="Helena Nascimento" class="personagem-img" onerror="this.src='/fotos/Helena.png';">
                                          <div class="personagem-info">
-                                            <h4>Helena Nascimento (38 anos | Enfermeira da ESFR)</h4>
-                                            <p><b>Raça/cor:</b> Negra | <b>Profissão:</b> Enfermeira da Estratégia Saúde da Família Ribeirinha</p>
-                    <p><b>Papel:</b> Personagem principal da saúde. Conhece as comunidades, acompanha as famílias e articula ações de educação.</p>
-                                        </div>
+                                             <h4>Helena Nascimento (38 anos | Enfermeira da ESFR)</h4>
+                                             <p><b>Raça/cor:</b> Negra | <b>Profissão:</b> Enfermeira da Estratégia Saúde da Família Ribeirinha</p>
+                                             <p><b>Papel:</b> Personagem principal da saúde. Conhece as comunidades, acompanha as famílias e articula ações de educação.</p>
+                                         </div>
                                     </div>
                                     <!-- 2. Jandira -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/Jandira.png" alt="Jandira Aruã" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/image.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/Jandira.png" alt="Jandira Aruã" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/image.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Jandira Aruã (46 anos | Liderança comunitária)</h4>
+                                            <h4 class="personagem-titulo-margem">Jandira Aruã (46 anos | Liderança comunitária)</h4>
                                             <p><b>Identidade:</b> Indígena | <b>Profissão/atuação:</b> Liderança comunitária e agricultora</p>
                                             <p><b>Papel:</b> Representa a participação social e os saberes do território. Conhece as rotas fluviais e defende que a prevenção considere a realidade local. Traz o questionamento: “Como falar de segurança sem desconsiderar a forma como a comunidade vive, trabalha e se desloca?”</p>
                                         </div>
                                     </div>
-
                                     <!-- 3. Raimundo -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/Raimundo.png" alt="Raimundo Ferreira" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/Raimundo.png" alt="Raimundo Ferreira" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Raimundo Ferreira (52 anos | Barqueiro)</h4>
+                                            <h4 class="personagem-titulo-margem">Raimundo Ferreira (52 anos | Barqueiro)</h4>
                                             <p><b>Raça/cor:</b> Parda | <b>Profissão:</b> Barqueiro e pequeno transportador</p>
                                             <p><b>Papel:</b> Representa os proprietários e trabalhadores que utilizam embarcações. Sua trajetória mostra como condições econômicas, manutenção, informação e segurança se relacionam.</p>
                                         </div>
                                     </div>
-
                                     <!-- 4. Luana -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/Luana.png" alt="Luana Pereira" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/Luana.png" alt="Luana Pereira" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Luana Pereira (15 anos | Adolescente ribeirinha)</h4>
+                                            <h4 class="personagem-titulo-margem">Luana Pereira (15 anos | Adolescente ribeirinha)</h4>
                                             <p><b>Raça/cor:</b> Parda | <b>Profissão:</b> Estudante</p>
                                             <p><b>Papel:</b> Representa crianças e adolescentes que circulam nos territórios das águas. Aborda prevenção, proteção integral, direitos, educação, gênero, imagem corporal, saúde mental e vida escolar.</p>
                                         </div>
                                     </div>
-
                                     <!-- 5. André Luiz -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/André Luiz.png" alt="André Luiz" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/André Luiz.png" alt="André Luiz" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">André Luiz (41 anos | Gestor municipal)</h4>
+                                            <h4 class="personagem-titulo-margem">André Luiz (41 anos | Gestor municipal)</h4>
                                             <p><b>Raça/cor:</b> Branca | <b>Profissão:</b> Coordenador municipal de Atenção à Saúde</p>
                                             <p><b>Papel:</b> Representa a gestão e a organização da rede. Trabalha na transformação de problemas em fluxos, protocolos, planejamento e articulação intersetorial.</p>
                                         </div>
                                     </div>
-
                                     <!-- 6. Ana Pereira -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/Ana Pereira.png" alt="Ana Pereira" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/Ana Pereira.png" alt="Ana Pereira" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Ana Pereira (39 anos | Mãe de Luana)</h4>
+                                            <h4 class="personagem-titulo-margem">Ana Pereira (39 anos | Mãe de Luana)</h4>
                                             <p><b>Raça/cor:</b> Parda | <b>Profissão/atuação:</b> Agricultora familiar e trabalhadora informal</p>
                                             <p><b>Papel:</b> Representa as famílias que vivem nos territórios das águas. Aborda proteção integral, direitos sociais, participação familiar e articulação com a rede.</p>
                                         </div>
                                     </div>
-
                                     <!-- 7. Paulo Mendes -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/Paulo Mendes.png" alt="Paulo Mendes" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/Paulo Mendes.png" alt="Paulo Mendes" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Paulo Mendes (32 anos | Agente Comunitário de Saúde)</h4>
+                                            <h4 class="personagem-titulo-margem">Paulo Mendes (32 anos | Agente Comunitário de Saúde)</h4>
                                             <p><b>Raça/cor:</b> Negro | <b>Profissão:</b> Agente Comunitário de Saúde (ACS)</p>
                                             <p><b>Papel:</b> Representa o vínculo entre os serviços de saúde e as comunidades ribeirinhas. Aborda territorialização, busca ativa, educação em saúde, identificação de riscos e vigilância.</p>
                                         </div>
                                     </div>
-
                                     <!-- 8. Camila Rocha -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/Camila Rocha.png" alt="Camila Rocha" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/Camila Rocha.png" alt="Camila Rocha" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Camila Rocha (35 anos | Psicóloga da RAPS)</h4>
+                                            <h4 class="personagem-titulo-margem">Camila Rocha (35 anos | Psicóloga da RAPS)</h4>
                                             <p><b>Raça/cor:</b> Branca | <b>Profissão:</b> Psicóloga (Rede de Atenção Psicossocial)</p>
                                             <p><b>Papel:</b> Representa a atenção à saúde mental e articulação com a RAPS e Atenção Primária. Aborda acolhimento, sofrimento psíquico, imagem corporal, estigma, matriciamento e reabilitação.</p>
                                         </div>
                                     </div>
-
                                     <!-- 9. Marta dos Santos -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:25px; border-bottom:1px solid #e2e8f0; padding-bottom:20px;">
-                                        <img src="./fotos/Marta dos Santos.png" alt="Marta dos Santos" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-custom">
+                                        <img src="./fotos/Marta dos Santos.png" alt="Marta dos Santos" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Marta dos Santos (44 anos | Assistente social)</h4>
+                                            <h4 class="personagem-titulo-margem">Marta dos Santos (44 anos | Assistente social)</h4>
                                             <p><b>Raça/cor:</b> Negra | <b>Profissão:</b> Assistente social</p>
                                             <p><b>Papel:</b> Representa a proteção social e articulação entre políticas públicas. Aborda direitos, assistência social, educação, orientação às famílias e articulação intersetorial.</p>
                                         </div>
                                     </div>
-
                                     <!-- 10. Rosa Almeida -->
-                                    <div class="personagem-card" style="display:flex; gap:20px; align-items:flex-start; margin-bottom:0;">
-                                        <img src="./fotos/Rosa Almeida.png" alt="Rosa Almeida" class="personagem-img" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:none; background:transparent; box-shadow:none;" onerror="this.src='./fotos/Jandira.png';">
+                                    <div class="personagem-card personagem-card-ultimo">
+                                        <img src="./fotos/Rosa Almeida.png" alt="Rosa Almeida" class="personagem-img personagem-img-redonda" onerror="this.src='./fotos/Jandira.png';">
                                         <div class="personagem-info">
-                                            <h4 style="margin-top:0;">Rosa Almeida (34 anos | Sobrevivente de escalpelamento)</h4>
+                                            <h4 class="personagem-titulo-margem">Rosa Almeida (34 anos | Sobrevivente de escalpelamento)</h4>
                                             <p><b>Raça/cor:</b> Parda | <b>Profissão/atuação:</b> Artesã e produtora de alimentos</p>
                                             <p><b>Papel:</b> Traz a perspectiva de quem passou pela experiência do escalpelamento e retomou suas atividades. Aborda tratamento, reabilitação, saúde mental, imagem corporal, estigma, autonomia e direitos.</p>
                                         </div>
@@ -425,27 +396,24 @@ const secoesCurso = [
                                 </div>
                             </div>
                         </div>
-                     </div>
-                    `
+                    </div>
+                `
             }
         ]
     },
 
-    // ==========================================
     // MÓDULO 1 - UNIDADE 1
-    // ==========================================
     {
         id: 'm1_apresentacao',
-
-        titulo: 'Módulo 1 | Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica',
+        titulo: 'Apresentação',
         modulo: 'mod1',
         paginas: [
             {
-                header: 'Apresentação do Módulo',
+                header: 'Apresentação',
                 html: `
                     <div class="objetivo-box">
-                        <h4 style="margin-top:0; color:var(--mod-active-color);">Objetivo de aprendizagem do módulo</h4>
-                        <p style="margin:0;">Analisar os contextos socioterritoriais, culturais e de gênero relacionados ao escalpelamento, identificando fatores de vulnerabilidade, impactos à saúde e estratégias de vigilância e prevenção nos territórios das águas.</p>
+                        <h4 class="objetivo-titulo-padrao">Objetivo de aprendizagem do módulo</h4>
+                        <p class="objetivo-paragrafo-limpo">Analisar os contextos socioterritoriais, culturais e de gênero relacionados ao escalpelamento, identificando fatores de vulnerabilidade, impactos à saúde e estratégias de vigilância e prevenção nos territórios das águas.</p>
                     </div>
                     <p>Antes de pensar em como cuidar de uma pessoa em situação de escalpelamento, é preciso compreender onde, como e por que esses acidentes acontecem.</p>
                     <p>No primeiro módulo, você conhecerá os territórios das águas, seus modos de vida, formas de trabalho e deslocamento e os contextos relacionados à ocorrência do escalpelamento.</p>
@@ -470,27 +438,22 @@ const secoesCurso = [
                     <p>Raimundo explica que a embarcação é sua principal fonte de renda e que a adaptação do motor representa um custo que ele não consegue assumir naquele momento.</p>
                     <p>A equipe precisa compreender como aquele risco se constituiu e quais fatores do território contribuem para sua permanência.</p>
                     
-                    <!-- BLOCO DE PERGUNTAS-DESAFIO ESTILIZADO -->
-                    <div class="pergunta-desafio-box">
-                        <div class="pergunta-desafio-header">
-                            <span><i class="fa fa-question-circle" style="margin-right: 10px;"></i> Perguntas-desafio</span>
-                            <i class="fa fa-ship" style="font-size: 24px; opacity: 0.9;"></i>
-                        </div>
-                        <ul class="pergunta-desafio-lista">
+                    <div class="caixa-pergunta-imagem">
+                        <ul>
                             <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
                                 <div>Quais situações presentes no território de Vila do Arari podem aumentar o risco de ocorrência de escalpelamento?</div>
                             </li>
                             <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
                                 <div>Como as características dos territórios das águas, os modos de vida, o trabalho e a mobilidade fluvial se relacionam com o risco de escalpelamento?</div>
                             </li>
                             <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
                                 <div>De que maneira gênero, idade, condições sociais e características das atividades realizadas no território podem interferir na exposição ao risco?</div>
                             </li>
                             <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+                                <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
                                 <div>Como a vigilância em saúde pode reconhecer e acompanhar situações de risco para orientar ações de prevenção no território?</div>
                             </li>
                         </ul>
@@ -500,18 +463,15 @@ const secoesCurso = [
         ]
     },
 
-    // ==========================================
-    // MÓDULO 1 - UNIDADE 1
-    // ==========================================
-
+    // MÓDULO 1 - UNIDADES EXTRAS
     {
         id: 'm1u1_t1',
-        titulo: 'Populações do campo, floresta e águas (CFA) e PCTs',
+        titulo: 'Populações do campo, floresta e águas (CFA) e povos e comunidades tradicionais (PCTs)',
         modulo: 'mod1',
         paginas: [
             {
                 header: 'Unidade 1 - Povos das águas, territórios e contextos do escalpelamento',
-                html: `<h3>Populações do campo, floresta e águas (CFA) e PCTs</h3>
+                html: `<h3>Populações do campo, floresta e águas (CFA) e povos e comunidades tradicionais (PCTs)</h3>
                 <p>Conteúdo detalhado sobre os povos e comunidades tradicionais das águas.</p>`
             }
         ]
@@ -527,20 +487,14 @@ const secoesCurso = [
             }
         ]
     },
-
-
-    // ==========================================
-    // MÓDULO 1 - UNIDADE 2
-    // ==========================================
-
     {
         id: 'm1u2_t1',
-        titulo: 'Perfil epidemiológico das vítimas',
+        titulo: 'Perfil epidemiológico das vítimas de escalpelamento ',
         modulo: 'mod1',
         paginas: [
             {
                 header: 'Unidade 2 - Interseccionalidade, vulnerabilidade social, epidemiologia e Vigilância em Saúde',
-                html: `<h3>Perfil epidemiológico das vítimas</h3><p>Dados estatísticos e características demográficas das pessoas afetadas.</p>`
+                html: `<h3>Perfil epidemiológico das vítimas de escalpelamento </h3><p>Dados estatísticos e características demográficas das pessoas afetadas.</p>`
             }
         ]
     },
@@ -556,21 +510,18 @@ const secoesCurso = [
         ]
     },
 
-
-    // ==========================================
     // MÓDULO 2
-    // ==========================================
     {
         id: 'm2_apresentacao',
-        titulo: 'Módulo 2 - Apresentação',
+        titulo: 'Apresentação',
         modulo: 'mod2',
         paginas: [
             {
-                header: 'Apresentação do Módulo ',
+                header: 'Apresentação ',
                 html: `
                     <div class="objetivo-box">
-                        <h4 style="margin-top:0; color:var(--mod-active-color);">Objetivo de aprendizagem do módulo</h4>
-                        <p style="margin:0;">Reconhecer os direitos sociais, humanos e institucionais das vítimas de escalpelamento, compreendendo a atuação das políticas públicas e da rede de proteção social.</p>
+                        <h4 class="objetivo-titulo-padrao">Objetivo de aprendizagem do módulo</h4>
+                        <p class="objetivo-paragrafo-limpo">Reconhecer os direitos sociais, humanos e institucionais das vítimas de escalpelamento, compreendendo a atuação das políticas públicas e da rede de proteção social.</p>
                     </div>
                     <p>Um acidente não termina quando a emergência é atendida. Uma pessoa em situação de escalpelamento pode precisar de cuidados de saúde, acompanhamento social, apoio à família, orientação sobre direitos, reabilitação e suporte para retomar atividades escolares, profissionais e comunitárias.</p>
                     <p>Neste módulo, você conhecerá os direitos das pessoas em situação de escalpelamento e os caminhos de acesso às políticas públicas e à rede de proteção social.</p>
@@ -592,12 +543,7 @@ const secoesCurso = [
                     <p>Marta, assistente social, tenta organizar os encaminhamentos, mas identifica que a família não conhece os serviços que pode acessar e que os profissionais também têm dúvidas sobre os fluxos existentes.</p>
                     <p>André percebe que a situação revela uma dificuldade maior: o município não tem um fluxo suficientemente articulado para acompanhar a pessoa e a família depois do atendimento inicial.</p>
                     
-                    <!-- BLOCO DE PERGUNTAS-DESAFIO ESTILIZADO -->
-                    <div class="pergunta-desafio-box">
-                        <div class="pergunta-desafio-header">
-                            <span><i class="fa fa-question-circle" style="margin-right: 10px;"></i> Perguntas-desafio</span>
-                            <i class="fa fa-ship" style="font-size: 24px; opacity: 0.9;"></i>
-                        </div>
+                    <div class="caixa-pergunta-imagem">
                         <ul class="pergunta-desafio-lista">
                             <li>
                                 <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
@@ -621,23 +567,19 @@ const secoesCurso = [
             }
         ]
     },
-    // ==========================================
-    // MÓDULO 2 - UNIDADE 1
-    // ==========================================
-
     {
-        id: 'm2u1',
+        id: 'm2u1_t1',
         titulo: 'Direitos humanos e populações vulnerabilizadas ',
         modulo: 'mod2',
         paginas: [
             {
                 header: 'Unidade 1 - Direitos humanos, proteção integral e justiça social',
-                html: `<h3>Direitos humanos e proteções</h3><p>Conteúdo do Módulo 2.</p>`
+                html: `<h3>Direitos humanos e populações vulnerabilizadas </h3><p>Conteúdo do Módulo 2.</p>`
             }
         ]
     },
     {
-        id: 'm2u2',
+        id: 'm2u1_t2',
         titulo: 'Proteção integral à infância e adolescência',
         modulo: 'mod2',
         paginas: [
@@ -647,38 +589,41 @@ const secoesCurso = [
             }
         ]
     },
-
-    // ==========================================
-    // MÓDULO 2 - UNIDADE 2
-    // ==========================================
-
     {
-        id: 'm2u2',
+        id: 'm2u2_t1',
         titulo: 'Módulo 2 - Unidade 2',
         modulo: 'mod2',
         paginas: [
             {
-                header: 'Módulo 2 | Unidade 2<br>Legislação e Prevenção',
-                html: `<h3>Legislação e Prevenção</h3><p>Lei de segurança em embarcações.</p>`
+                header: 'Unidade 2 - Acesso a direitos e medidas de proteção ',
+                html: `<h3>Direitos sociais, previdenciários e assistenciais</h3><p>Texto.</p>`
+            }
+        ]
+    },
+    {
+        id: 'm2u2_t2',
+        titulo: 'Módulo 2 - Unidade 2',
+        modulo: 'mod2',
+        paginas: [
+            {
+                header: 'Unidade 2 - Acesso a direitos e medidas de proteção ',
+                html: `<h3>Acesso à saúde, educação e proteção social</h3><p>Texto.</p>`
             }
         ]
     },
 
-
-    // ==========================================
-    // MÓDULO 3 
-    // ==========================================
+    // MÓDULO 3
     {
         id: 'm3_apresentacao',
-        titulo: 'Módulo 3 - Apresentação',
+        titulo: 'Apresentação',
         modulo: 'mod3',
         paginas: [
             {
-                header: 'Apresentação do Módulo ',
+                header: 'Apresentação ',
                 html: `
                     <div class="objetivo-box">
-                        <h4 style="margin-top:0; color:var(--mod-active-color);">Objetivo de aprendizagem do módulo</h4>
-                        <p style="margin:0;">Reconhecer os impactos psicossociais do escalpelamento e desenvolver estratégias de cuidado integral, acolhimento e reabilitação psicossocial.</p>
+                        <h4 class="objetivo-titulo-padrao">Objetivo de aprendizagem do módulo</h4>
+                        <p class="objetivo-paragrafo-limpo">Reconhecer os impactos psicossociais do escalpelamento e desenvolver estratégias de cuidado integral, acolhimento e reabilitação psicossocial.</p>
                     </div>
                     <p>Depois do atendimento inicial, outros desafios podem surgir. As repercussões do escalpelamento ultrapassam as lesões físicas e podem afetar a autoestima, a imagem corporal, os vínculos familiares, a convivência social, a escolarização, o trabalho e os projetos de vida.</p>
                     <p>Neste módulo, você conhecerá os impactos psicossociais relacionados ao escalpelamento e os caminhos para o acolhimento, a atenção em saúde mental e a reabilitação psicossocial.</p>
@@ -686,7 +631,6 @@ const secoesCurso = [
             }
         ]
     },
-
     {
         id: 'm3_contexto',
         titulo: 'Contexto',
@@ -700,11 +644,10 @@ const secoesCurso = [
                     <p>Durante uma atividade de educação em saúde, Rosa conversa com Helena e Camila sobre sua experiência. A equipe percebe que, apesar de Rosa ter recebido atendimento médico após o acidente, seu acompanhamento em saúde mental não ocorreu de forma contínua. Ao mesmo tempo, Rosa relata que encontrou apoio em pessoas da própria comunidade e que voltar ao trabalho foi parte importante de sua reconstrução da vida.</p>
                     <p>O caso permite mostrar que o cuidado não termina com a alta hospitalar nem se resume ao tratamento das lesões físicas.</p>
                     
-                    <!-- BLOCO DE PERGUNTAS-DESAFIO ESTILIZADO -->
                     <div class="pergunta-desafio-box">
                         <div class="pergunta-desafio-header">
-                            <span><i class="fa fa-question-circle" style="margin-right: 10px;"></i> Perguntas-desafio</span>
-                            <i class="fa fa-ship" style="font-size: 24px; opacity: 0.9;"></i>
+                            <span><i class="fa fa-question-circle" class="pergunta-icone-espacamento"></i> Perguntas-desafio</span>
+                            <i class="fa fa-ship icone-nav-custom"></i>
                         </div>
                         <ul class="pergunta-desafio-lista">
                             <li>
@@ -729,7 +672,6 @@ const secoesCurso = [
             }
         ]
     },
-
     {
         id: 'm3_t1',
         titulo: 'Título do Tópico do Novo Módulo',
@@ -742,20 +684,18 @@ const secoesCurso = [
         ]
     },
 
-    // ==========================================
-    // MÓDULO 4 
-    // ==========================================
+    // MÓDULO 4
     {
         id: 'm4_apresentacao',
-        titulo: 'Módulo 4 - Apresentação',
+        titulo: 'Apresentação',
         modulo: 'mod4',
         paginas: [
             {
-                header: 'Apresentação do Módulo ',
+                header: 'Apresentação ',
                 html: `
                     <div class="objetivo-box">
-                        <h4 style="margin-top:0; color:var(--mod-active-color);">Objetivo de aprendizagem do módulo</h4>
-                        <p style="margin:0;">Aplicar estratégias de prevenção, acolhimento e coordenação do cuidado às pessoas vítimas de escalpelamento nos diferentes pontos da Rede de Atenção à Saúde.</p>
+                        <h4 class="objetivo-titulo-padrao">Objetivo de aprendizagem do módulo</h4>
+                        <p class="objetivo-paragrafo-limpo">Aplicar estratégias de prevenção, acolhimento e coordenação do cuidado às pessoas vítimas de escalpelamento nos diferentes pontos da Rede de Atenção à Saúde.</p>
                     </div>
                     <p>Prevenir novos acidentes e garantir continuidade do cuidado exige articulação. No último módulo, você retornará ao território de Vila do Arari para acompanhar a construção de estratégias de prevenção e organização do cuidado.</p>
                 `
@@ -775,11 +715,10 @@ const secoesCurso = [
                     <p>Ao mesmo tempo, Helena recebe a informação de que uma criança quase se aproximou do motor durante uma viagem. Jandira leva a situação para uma reunião comunitária. Raimundo participa do encontro e argumenta que os proprietários precisam de orientação e condições para adequar suas embarcações.</p>
                     <p>André reúne os profissionais da saúde e representantes de outros setores para discutir o problema. A pergunta deixa de ser apenas "o que fazer diante de um acidente?" Agora é: "O que o município precisa organizar para que o acidente não aconteça?"</p>
                     
-                    <!-- BLOCO DE PERGUNTAS-DESAFIO ESTILIZADO -->
                     <div class="pergunta-desafio-box">
                         <div class="pergunta-desafio-header">
-                            <span><i class="fa fa-question-circle" style="margin-right: 10px;"></i> Perguntas-desafio</span>
-                            <i class="fa fa-ship" style="font-size: 24px; opacity: 0.9;"></i>
+                            <span><i class="fa fa-question-circle" class="pergunta-icone-espacamento"></i> Perguntas-desafio</span>
+                            <i class="fa fa-ship icone-nav-custom"></i>
                         </div>
                         <ul class="pergunta-desafio-lista">
                             <li>
@@ -808,7 +747,6 @@ const secoesCurso = [
             }
         ]
     },
-
     {
         id: 'm4_t1',
         titulo: 'Título do Tópico do Novo Módulo',
@@ -821,11 +759,7 @@ const secoesCurso = [
         ]
     },
 
-
-
-    // ==========================================
     // FINAIS
-    // ==========================================
     {
         id: 'comentario',
         titulo: 'Comentário final',
@@ -855,8 +789,7 @@ let paginaInternaIndex = 0;
 let progressoConcluido = JSON.parse(localStorage.getItem('curso_progresso')) || {};
 
 function alternarMenuLateral() {
-    if ($(window).width() <= 991) {
-        $('#sidebar').toggleClass('open-mobile');
+    if ($(window).width() <= 991) {$('#sidebar').toggleClass('open-mobile');
     } else {
         $('#sidebar').toggleClass('collapsed-sidebar');
     }
@@ -870,12 +803,10 @@ function mudarSecao(idSecao) {
     const index = secoesCurso.findIndex(s => s.id === idSecao);
     if (index !== -1) {
         secaoAtualIndex = index;
-        paginaInternaIndex = 0; // Reseta para a primeira página
+        paginaInternaIndex = 0;
 
-        // 1. Remove o 'active' de absolutamente TUDO no menu lateral
         $('#menuModulos li, #menuModulos a').removeClass('active');
 
-        // 2. Adiciona o 'active' EXATAMENTE no <li> correspondente ao ID da seção atual
         const itemMenu = document.getElementById('nav-' + idSecao);
         if (itemMenu) {
             $(itemMenu).addClass('active');
@@ -884,6 +815,7 @@ function mudarSecao(idSecao) {
         renderizarAtual();
     }
 }
+
 function proximoPasso() {
     const secao = secoesCurso[secaoAtualIndex];
     if (paginaInternaIndex < secao.paginas.length - 1) {
@@ -920,8 +852,8 @@ function renderizarAtual() {
 
     let corAtual = '#115E53';
     if (secao.modulo === 'mod1') corAtual = '#115E53';
-    else if (secao.modulo === 'mod2') corAtual = '#205758' ;
-    else if (secao.modulo === 'mod3') corAtual =  '#0f4c5c';
+    else if (secao.modulo === 'mod2') corAtual = '#205758';
+    else if (secao.modulo === 'mod3') corAtual = '#0f4c5c';
     else if (secao.modulo === 'mod4') corAtual = '#365314';
     mudarCorModulo(corAtual);
 
@@ -931,22 +863,29 @@ function renderizarAtual() {
     if (elSubtitulo) {
         let nomeModuloTexto = "";
 
-        // Define o texto base superior de acordo com o módulo
         if (secao.modulo === 'mod1') nomeModuloTexto = "Módulo 1 - Escalpelamento: causas, contextos socioculturais e territoriais, gênero, determinação social da saúde e vigilância epidemiológica";
         else if (secao.modulo === 'mod2') nomeModuloTexto = "Módulo 2 - Direitos, proteção social e políticas públicas às pessoas em risco ou em situação de escalpelamento";
         else if (secao.modulo === 'mod3') nomeModuloTexto = "Módulo 3 - Saúde mental e atenção psicossocial às pessoas vítimas de escalpelamento";
         else if (secao.modulo === 'mod4') nomeModuloTexto = "Módulo 4 - Prevenção, acolhimento e coordenação do cuidado na Rede de Atenção à Saúde nos territórios das águas";
         else nomeModuloTexto = "Curso";
 
-        // Se estiver dentro de um módulo, exibe o nome do módulo em cima (suave/opaco) e o título embaixo em destaque com a cor do tema
         if (secao.modulo && secao.modulo !== 'base') {
             elSubtitulo.innerHTML = `
-                <div class="primeira-maiuscula" style="font-size: 18px !important; font-weight: normal; margin-bottom: 2px; color: rgba(0, 0, 0, 0.65); ">${nomeModuloTexto}</div>
-                <div style="font-size: 22px !important; font-weight: bold; color: var(--mod-active-color);">${pagina.header || secao.titulo}</div>
+                <div class="primeira-maiuscula cabecalho-modulo-secundario">${nomeModuloTexto}</div>
+                <div class="cabecalho-pagina-destaque">${pagina.header || secao.titulo}</div>
             `;
         } else {
-            elSubtitulo.innerHTML = `<div style="font-size: 22px !important; font-weight: bold; color: var(--mod-active-color);">${secao.titulo}</div>`;
+            elSubtitulo.innerHTML = `<div class="cabecalho-pagina-destaque">${secao.titulo}</div>`;
         }
+        const areaRolagem = document.querySelector('.scrollable-content-area');
+    if (areaRolagem) {
+        areaRolagem.scrollTop = 0;
+    }
+    window.scrollTo(0, 0); // Para garantir também no corpo geral caso esteja em modo mobile/responsivo
+    // ==========================================
+
+    const desativarAnterior = (secaoAtualIndex === 0 && paginaInternaIndex === 0);
+    document.getElementById('btnAnterior').classList.toggle('disabled', desativarAnterior);
     }
 
     document.getElementById('paginaAtual').innerText = paginaInternaIndex + 1;
@@ -961,15 +900,9 @@ function renderizarAtual() {
     const desativarAnterior = (secaoAtualIndex === 0 && paginaInternaIndex === 0);
     document.getElementById('btnAnterior').classList.toggle('disabled', desativarAnterior);
 
-// ==========================================
-    // CONTROLE DE DESTAQUE E ACORDEÃO PERSISTENTE
-    // ==========================================
     $('#menuModulos li').removeClass('active');
 
-    // 1. Tenta encontrar pelo ID exato no menu (ex: nav-m1_apresentacao, nav-m2u1, etc.)
     let elMenu = document.getElementById('nav-' + secao.id);
-
-    // 2. Se não achar, tenta buscar pelo link que contenha o onclick da seção atual
     let linkAtivo = null;
     if (!elMenu) {
         $('#menuModulos a').each(function () {
@@ -984,7 +917,6 @@ function renderizarAtual() {
     if (elMenu) {
         const $el = $(elMenu);$el.addClass('active');
 
-        // Abre as gavetas pai (Nível 3 e Nível 2) corretamente
         let submenuPai = $el.closest('.collapse');
         if (submenuPai.length > 0) {
             let nivel2Pai = submenuPai.closest('.nivel2');
@@ -1000,7 +932,6 @@ function renderizarAtual() {
         let liPai = linkAtivo.closest('li');
         liPai.addClass('active');
 
-        // Abre o submenu de nível 3 se existir
         let submenuNivel3 = linkAtivo.closest('.nivel3');
         if (submenuNivel3.length > 0) {
             if (!submenuNivel3.hasClass('in')) {
@@ -1009,7 +940,6 @@ function renderizarAtual() {
             }
         }
 
-        // Abre o submenu de nível 2 e fecha os outros módulos
         let submenuNivel2 = linkAtivo.closest('.nivel2');
         if (submenuNivel2.length > 0) {
             $('#menuModulos .nivel2').not(submenuNivel2).collapse('hide');
@@ -1018,10 +948,11 @@ function renderizarAtual() {
             }
         }
     } else {
-        // Se for uma seção raiz, fecha os módulos
         $('#menuModulos .nivel2').collapse('hide');
     }
 }
+
+
 
 function abrirModalTerritorio(tipo) {
     let titulo = '';
@@ -1091,7 +1022,6 @@ function abrirModalTerritorio(tipo) {
             <li>Áreas de circulação de crianças próximas aos motores.</li>
         </ul>
     `;
-
     } else if (tipo === 'infraestrutura') {
         titulo = 'Infraestrutura de Vila do Arari';
         conteudo = `
@@ -1128,7 +1058,6 @@ function abrirModalTerritorio(tipo) {
             <li>Barcos utilizados para transporte escolar e de passageiros.</li>
         </ul>
     `;
-
     } else if (tipo === 'agravantes') {
         titulo = 'Agravantes e vulnerabilidades';
         conteudo = `
@@ -1170,7 +1099,6 @@ function abrirModalTerritorio(tipo) {
             <li>Pouca integração entre prevenção, assistência, vigilância e assistência social.</li>
         </ul>
     `;
-
     } else if (tipo === 'riscos') {
         titulo = 'Riscos e desafios';
         conteudo = `
@@ -1213,39 +1141,88 @@ function abrirModalTerritorio(tipo) {
 function atualizarPainelProgressoVisual() {
     let secoesConteudo = secoesCurso.filter(s => s.id !== 'progresso');
     let concluidosCount = 0;
-    let htmlCards = '';
 
     secoesConteudo.forEach((s) => {
+        if (progressoConcluido[s.id]) concluidosCount++;
+    });
+
+    let percentual = Math.round((concluidosCount / secoesConteudo.length) * 100);
+
+    let itensGerais = secoesConteudo.filter(s => !s.modulo || s.modulo === 'base');
+
+    const nomesModulos = {
+        'mod1': 'Módulo 1 | Escalpelamento: causas, contextos socioculturais e territoriais',
+        'mod2': 'Módulo 2 | Direitos, proteção social e políticas públicas',
+        'mod3': 'Módulo 3 | Saúde mental e atenção psicossocial',
+        'mod4': 'Módulo 4 | Prevenção, acolhimento e coordenação do cuidado'
+    };
+
+    let htmlConteudo = '';
+
+    itensGerais.forEach((s) => {
         const isConcluido = !!progressoConcluido[s.id];
-        if (isConcluido) concluidosCount++;
-
+        const classeCard = isConcluido ? 'progresso-card-item concluido' : 'progresso-card-item pendente';
         const iconeStatus = isConcluido
-            ? '<i class="fa fa-check-circle" style="color:#059669; font-size:22px;"></i>'
-            : '<i class="fa fa-circle-o" style="color:#bbb; font-size:22px;"></i>';
+            ? '<i class="fa fa-check-circle" class="progresso-icone-concluido"></i>'
+            : '<i class="fa fa-circle-o" class="progresso-icone-pendente"></i>';
 
-        htmlCards += `
-            <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:18px 22px; margin-bottom:15px; display:flex; justify-content:space-between; align-items:center; font-weight:700; cursor:pointer;" onclick="mudarSecao('${s.id}')">
+        htmlConteudo += `
+            <div class="${classeCard}" onclick="mudarSecao('${s.id}')">
                 <span>${s.titulo}</span>
                 <span>${iconeStatus}</span>
             </div>
         `;
     });
 
-    let percentual = Math.round((concluidosCount / secoesConteudo.length) * 100);
+    ['mod1', 'mod2', 'mod3', 'mod4'].forEach((modKey) => {
+        let itensDoModulo = secoesConteudo.filter(s => s.modulo === modKey);
+
+        if (itensDoModulo.length > 0) {
+            let cardsModuloHtml = '';
+
+            itensDoModulo.forEach((s) => {
+                const isConcluido = !!progressoConcluido[s.id];
+                const classeItem = isConcluido ? 'progresso-card-modulo-item concluido' : 'progresso-card-modulo-item pendente';
+                const iconeStatus = isConcluido
+                    ? '<i class="fa fa-check-circle" class="progresso-icone-mod-concluido"></i>'
+                    : '<i class="fa fa-circle-o" class="progresso-icone-mod-pendente"></i>';
+
+                cardsModuloHtml += `
+                    <div class="${classeItem}" onclick="mudarSecao('${s.id}')">
+                        <span>${s.titulo}</span>
+                        <span>${iconeStatus}</span>
+                    </div>
+                `;
+            });
+
+            let tituloModuloNome = nomesModulos[modKey] || `Módulo`;
+
+            htmlConteudo += `
+                <div class="progresso-modulo-bloco-espacamento">
+                    <h4 class="progresso-modulo-box-titulo">${tituloModuloNome}</h4>
+                    <div class="progresso-modulo-container">
+                        ${cardsModuloHtml}
+                    </div>
+                </div>
+            `;
+        }
+    });
 
     document.getElementById('painelConteudo').innerHTML = `
-        <h3 style="margin-top:0;">Seu andamento</h3>
+        <h3 class="progresso-titulo-principal">Seu andamento</h3>
         <p><b>Acompanhe seu progresso através dos módulos concluídos:</b></p>
         <br>
-        <div style="background:#e2e8f0; border-radius:4px; height:28px; width:100%; margin-bottom:25px; overflow:hidden; position:relative;">
-            <div style="background:var(--mod-active-color); height:100%; width:${percentual}%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:16px; font-weight:bold;" class="ebrima-num">${percentual}%</div>
+        <div class="progresso-barra-wrapper">
+            <div class="ebrima-num progresso-barra-fill-dinamica" style="width:${percentual}%;">${percentual}%</div>
         </div>
-        <div>${htmlCards}</div>
+        <div>${htmlConteudo}</div>
     `;
 }
 
-$(document).ready(function () {
-    $('#menuModulos').on('show.bs.collapse', '.collapse', function (e) {
+
+
+
+$(document).ready(function () {$('#menuModulos').on('show.bs.collapse', '.collapse', function (e) {
         e.stopPropagation();
         if ($(this.parentNode).closest('#menuModulos').length) {
             $(this).closest('ul').find('> li > .collapse.in').not(this).collapse('hide');
