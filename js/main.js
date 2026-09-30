@@ -258,7 +258,7 @@ const secoesCurso = [
                     </div>
 
                     <br>
-                    <h3>Infográfico do Território</h3>
+                    <h3>Características do Território</h3>
                     <p><b>Clique em cada item do infográfico abaixo para conhecer as características de Vila do Arari.</b></p>
                     
                     <div class="infografico-container territorio-infografico-wrapper">
@@ -281,7 +281,7 @@ const secoesCurso = [
                     <p>O município conta com serviços de Atenção Primária à Saúde, uma unidade hospitalar de pequeno porte e equipes que percorrem comunidades rurais e ribeirinhas. Entretanto, situações que exigem atendimento especializado precisam ser encaminhadas para outro município, aumentando o tempo de deslocamento e criando desafios para a continuidade do cuidado.</p>
                     
                     <div class="infografico-container territorio-bloco-central">
-                        <p class="territorio-legenda-topo">Representação de estudante ribeirinha em canoa na Vila do Arari.</p>
+                        <p class="territorio-legenda-topo">Representação de estudante ribeirinha em canoa na Vila do Arari</p>
                         <img src="./fotos/ribeirinhos.jpg" alt="Mapa de Vila do Arari" class="territorio-img-padrao">
                         <p class="territorio-legenda-base"><b>Fonte:</b> elaborada pela equipe de produção com auxílio de inteligência artificial generativa, 2026.</p>
                     </div>
@@ -440,28 +440,38 @@ const secoesCurso = [
                     
 
                     
-                    // <div class="card-container">
-                    // <!-- Imagem recortada do topo com as ondinhas e ícones originais -->
-                    //      <img src="cabecalho-ondas.png" alt="Abas e Ondas do Desafio" class="card-header-img">
-                    //     <ul>
-                    //         <li>
-                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                    //             <div>Quais situações presentes no território de Vila do Arari podem aumentar o risco de ocorrência de escalpelamento?</div>
-                    //         </li>
-                    //         <li>
-                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                    //             <div>Como as características dos territórios das águas, os modos de vida, o trabalho e a mobilidade fluvial se relacionam com o risco de escalpelamento?</div>
-                    //         </li>
-                    //         <li>
-                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                    //             <div>De que maneira gênero, idade, condições sociais e características das atividades realizadas no território podem interferir na exposição ao risco?</div>
-                    //         </li>
-                    //         <li>
-                    //             <div class="icone-pergunta-mini"><i class="fa fa-question"></i></div>
-                    //             <div>Como a vigilância em saúde pode reconhecer e acompanhar situações de risco para orientar ações de prevenção no território?</div>
-                    //         </li>
-                    //     </ul>
-                    // </div>
+<div class="caixa-desafio-flexivel">
+    <!-- Topo gráfico com o balão e o título -->
+    <div class="desafio-topo-img">
+        <img src="./fotos/cabecalho-ondas1.png" alt="Perguntas-desafio">
+    </div>
+
+    <!-- Lista de perguntas com texto real em HTML (responsivo e nítido) -->
+    <ul class="desafio-lista-texto">
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>Quais situações presentes no território de Vila do Arari podem aumentar o risco de ocorrência de escalpelamento?</div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>Como as características dos territórios das águas, os modos de vida, o trabalho e a mobilidade fluvial se relacionam com o risco de escalpelamento?</div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>De que maneira gênero, idade, condições sociais e características das atividades realizadas no território podem interferir na exposição ao risco?</div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>Como a vigilância em saúde pode reconhecer e acompanhar situações de risco para orientar ações de prevenção no território?</div>
+        </li>
+    </ul>
+
+    <!-- Rodapé gráfico com o barco e as ondas -->
+    <div class="desafio-rodape-img">
+        <img src="./fotos/rodape-barco1.png" alt="Barco e paisagem ribeirinha">
+    </div>
+</div>
+                    
                 `
             }
         ]
@@ -547,26 +557,37 @@ const secoesCurso = [
                     <p>Marta, assistente social, tenta organizar os encaminhamentos, mas identifica que a família não conhece os serviços que pode acessar e que os profissionais também têm dúvidas sobre os fluxos existentes.</p>
                     <p>André percebe que a situação revela uma dificuldade maior: o município não tem um fluxo suficientemente articulado para acompanhar a pessoa e a família depois do atendimento inicial.</p>
                     
-                    <div class="caixa-pergunta-imagem">
-                        <ul class="pergunta-desafio-lista">
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+                    <div class="caixa-desafio-flexivel">
+    <!-- Topo gráfico com o balão e o título -->
+    <div class="desafio-topo-img">
+        <img src="./fotos/cabecalho-ondas2.png" alt="Perguntas-desafio">
+    </div>
+
+    <!-- Lista de perguntas com texto real em HTML (responsivo e nítido) -->
+    <ul class="desafio-lista-texto">
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Quais direitos precisam ser considerados no cuidado de uma pessoa em situação de escalpelamento e de sua família?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Como os serviços de saúde, assistência social e educação podem atuar de forma articulada para garantir proteção integral?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Quais políticas públicas e medidas de proteção podem ser acionadas diante das necessidades apresentadas por Luana e sua família?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Como organizar os fluxos de acesso aos serviços e à rede de proteção para evitar que a família precise enfrentar sozinha os diferentes caminhos institucionais?</div>
-                            </li>
-                        </ul>
-                    </div>
+        </li>
+    </ul>
+
+    <!-- Rodapé gráfico com o barco e as ondas -->
+    <div class="desafio-rodape-img">
+        <img src="./fotos/rodape-barco2.png" alt="Barco e paisagem ribeirinha">
+    </div>
+</div>
                 `
             }
         ]
@@ -648,30 +669,39 @@ const secoesCurso = [
                     <p>Durante uma atividade de educação em saúde, Rosa conversa com Helena e Camila sobre sua experiência. A equipe percebe que, apesar de Rosa ter recebido atendimento médico após o acidente, seu acompanhamento em saúde mental não ocorreu de forma contínua. Ao mesmo tempo, Rosa relata que encontrou apoio em pessoas da própria comunidade e que voltar ao trabalho foi parte importante de sua reconstrução da vida.</p>
                     <p>O caso permite mostrar que o cuidado não termina com a alta hospitalar nem se resume ao tratamento das lesões físicas.</p>
                     
-                    <div class="pergunta-desafio-box">
-                        <div class="pergunta-desafio-header">
-                            <span><i class="fa fa-question-circle" class="pergunta-icone-espacamento"></i> Perguntas-desafio</span>
-                            <i class="fa fa-ship icone-nav-custom"></i>
-                        </div>
-                        <ul class="pergunta-desafio-lista">
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+
+
+                    <div class="caixa-desafio-flexivel">
+    <!-- Topo gráfico com o balão e o título -->
+    <div class="desafio-topo-img">
+        <img src="./fotos/cabecalho-ondas3.png" alt="Perguntas-desafio">
+    </div>
+
+    <!-- Lista de perguntas com texto real em HTML (responsivo e nítido) -->
+    <ul class="desafio-lista-texto">
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Quais impactos emocionais, familiares e sociais podem acompanhar uma pessoa após um escalpelamento?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Como o estigma, a imagem corporal e as mudanças na vida social podem repercutir na saúde mental das pessoas em situação de escalpelamento?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Como a Atenção Primária, a RAPS, a família e a comunidade podem participar do cuidado em saúde mental?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
                                 <div>Quais estratégias podem contribuir para a reabilitação psicossocial, a retomada dos vínculos e a continuidade do cuidado no território?</div>
-                            </li>
-                        </ul>
-                    </div>
+        </li>
+    </ul>
+
+    <!-- Rodapé gráfico com o barco e as ondas -->
+    <div class="desafio-rodape-img">
+        <img src="./fotos/rodape-barco3.png" alt="Barco e paisagem ribeirinha">
+    </div>
+</div>
                 `
             }
         ]
@@ -718,35 +748,37 @@ const secoesCurso = [
                     <p>Meses depois do acidente de Luana, Paulo identifica uma nova situação de risco durante uma visita à comunidade. Uma embarcação utilizada para transportar moradores apresenta condições semelhantes às observadas anteriormente.</p>
                     <p>Ao mesmo tempo, Helena recebe a informação de que uma criança quase se aproximou do motor durante uma viagem. Jandira leva a situação para uma reunião comunitária. Raimundo participa do encontro e argumenta que os proprietários precisam de orientação e condições para adequar suas embarcações.</p>
                     <p>André reúne os profissionais da saúde e representantes de outros setores para discutir o problema. A pergunta deixa de ser apenas "o que fazer diante de um acidente?" Agora é: "O que o município precisa organizar para que o acidente não aconteça?"</p>
-                    
-                    <div class="pergunta-desafio-box">
-                        <div class="pergunta-desafio-header">
-                            <span><i class="fa fa-question-circle" class="pergunta-icone-espacamento"></i> Perguntas-desafio</span>
-                            <i class="fa fa-ship icone-nav-custom"></i>
-                        </div>
-                        <ul class="pergunta-desafio-lista">
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
-                                <div>Quais estratégias podem ser desenvolvidas em Vila do Arari para prevenir o escalpelamento e promover a segurança nos territórios das águas?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
-                                <div>Como as equipes de saúde podem desenvolver ações educativas e de comunicação que dialoguem com a realidade das comunidades?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
-                                <div>Como deve ocorrer o acolhimento e o manejo inicial de uma pessoa em situação de escalpelamento até sua inserção na rede de atenção?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
-                                <div>Como organizar os fluxos entre Atenção Primária, atenção especializada, reabilitação e saúde mental para garantir continuidade do cuidado?</div>
-                            </li>
-                            <li>
-                                <div class="pergunta-icone-circulo"><i class="fa fa-question"></i></div>
-                                <div>Como diferentes setores e atores do território podem atuar de forma articulada na prevenção e na atenção às pessoas em situação de escalpelamento?</div>
-                            </li>
-                        </ul>
-                    </div>
+                    <div class="caixa-desafio-flexivel">
+    <!-- Topo gráfico com o balão e o título -->
+    <div class="desafio-topo-img">
+        <img src="./fotos/cabecalho-ondas4.png" alt="Perguntas-desafio">
+    </div>
+
+    <!-- Lista de perguntas com texto real em HTML (responsivo e nítido) -->
+    <ul class="desafio-lista-texto">
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>Quais situações presentes no território de Vila do Arari podem aumentar o risco de ocorrência de escalpelamento?</div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>Como as características dos territórios das águas, os modos de vida, o trabalho e a mobilidade fluvial se relacionam com o risco de escalpelamento?</div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>De que maneira gênero, idade, condições sociais e características das atividades realizadas no território podem interferir na exposição ao risco?</div>
+        </li>
+        <li>
+            <div class="desafio-circulo-icone"><i class="fa fa-question"></i></div>
+            <div>Como a vigilância em saúde pode reconhecer e acompanhar situações de risco para orientar ações de prevenção no território?</div>
+        </li>
+    </ul>
+
+    <!-- Rodapé gráfico com o barco e as ondas -->
+    <div class="desafio-rodape-img">
+        <img src="./fotos/rodape-barco4.png" alt="Barco e paisagem ribeirinha">
+    </div>
+</div> 
                 `
             }
         ]

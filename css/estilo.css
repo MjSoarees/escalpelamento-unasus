@@ -331,6 +331,7 @@ body {
   margin: 0 auto;
   background-color: transparent;
   box-shadow: none;
+  margin-bottom: 30px;
 }
 
 .infografico-container {
@@ -633,7 +634,7 @@ body {
   color: #ffffff !important;
 }
 
-/* .caixa-pergunta-imagem {
+.caixa-pergunta-imagem {
   background-image: url("../fotos/pergunta.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1193,3 +1194,105 @@ body {
     background: var(--color-verde-base) !important; /* Garante que nenhum gradiente sobrescreva */
 }
 
+
+/* ==========================================================================
+   CAIXA DESAFIO
+   ========================================================================== */
+
+.caixa-desafio-flexivel {
+  margin-top: 100px !important;
+  position: relative;
+  background: #ffffff;
+  border: 5px solid var(--mod-active-color, #115E53);
+  border-radius: 16px;
+  padding: 60px 30px 130px 30px; 
+  margin: 50px 0 35px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Controla o tamanho do bloco do balão em relação à caixa */
+.desafio-topo-img {
+  margin-top: -40px;
+  position: absolute;
+  top: -42px; 
+  left: -5px; /* Puxa um pouquinho para a esquerda para o balão redondo sobressair da borda */
+  width: 65%;  /* Tamanho proporcional excelente para dar destaque */
+  max-width: 400px;
+  z-index: 3;
+}
+
+.desafio-topo-img img {
+  width: 150%; /* A imagem preenche o bloco de forma perfeita e sem distorcer */
+  height: auto;
+  display: block;
+}
+
+/* Estilização da lista de perguntas em texto real com respiro adequado */
+.desafio-lista-texto {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 10PX 0;
+}
+
+.desafio-lista-texto li {
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.desafio-circulo-icone {
+  background: var(--mod-active-color, #115E53);
+  color: #ffffff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Faz o rodapé cobrir toda a extensão inferior da caixa de ponta a ponta */
+.desafio-rodape-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.desafio-rodape-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+/* Ajustes finos para celulares */
+@media (max-width: 768px) {
+  .caixa-desafio-flexivel {
+    padding: 50px 20px 120px 20px;
+    margin-top: 20px;
+  }
+  
+  .desafio-topo-img img {
+    width: 130%; /* No celular ajustamos levemente para não estourar a tela */
+     display: block;
+    padding: 50px 20px 120px 20px;
+    }
+
+  .desafio-lista-texto li {
+    font-size: 15px;
+  }
+
+}
