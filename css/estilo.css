@@ -1,0 +1,1735 @@
+/* ==========================================================================
+   1. IDENTIDADE VISUAL & HARMONIA DE CORES POR MÓDULO
+   ========================================================================== */
+
+:root {
+  --color-verde-base: #2e5a39;
+  --color-text-dark: #111827;
+
+  --mod1-color: #2e5a39; /* Verde Petróleo */
+  --mod2-color: #69913f; /* Azul Petróleo */
+  --mod3-color: #d4812a; /* Verde Oliva Profundo */
+  --mod4-color: #804a24; /* Azul Profundo */
+
+  --mod-active-color: var(--color-verde-base);
+}
+
+body,
+p,
+div,
+span,
+button,
+a,
+li {
+  font-family: "Corbel", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-text-dark);
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 30px !important;
+  font-weight: bold !important;
+  color: var(--mod-active-color);
+  margin-top: 10px;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+h4 {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+.ebrima-num,
+.page-counter {
+  font-family: "Ebrima", "Segoe UI", sans-serif !important;
+  font-weight: bold;
+  color: var(--color-verde-base);
+  font-size: 14px !important;
+}
+
+body {
+  background-color: #f7f9fa;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#sidebar {
+  width: 380px;
+  min-width: 380px;
+  height: 100vh;
+  background-color: var(--mod-active-color);
+  position: relative;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.4s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+#sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/fotos/grafismo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+#sidebar.collapsed-sidebar {
+  margin-left: -380px;
+}
+
+.sidebar-header {
+  padding: 18px 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 20px !important;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-transform: capitalize !important;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-header span {
+  font-size: 20px !important;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.toggle-sidebar-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuPrincipal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 60px);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.menuPrincipal li a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px !important;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.2s;
+  text-align: left;
+}
+
+.menuPrincipal li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menuPrincipal li.active > a {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  font-weight: bold !important;
+  border-left: 6px solid #79f2e6;
+  color: #ffffff !important;
+}
+
+.icon-check {
+  color: #79f2e6;
+  float: right;
+  font-size: 18px;
+}
+
+.menuPrincipal ul.nivel2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menuPrincipal ul.nivel2 li a {
+  padding: 12px 20px 12px 30px;
+  font-size: 16px !important;
+  color: #e2e8f0;
+  font-weight: bold;
+}
+
+.menuPrincipal ul.nivel3 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menuPrincipal ul.nivel3 li a {
+  padding: 10px 15px 10px 45px;
+  font-size: 14px !important;
+  color: #cbd5e1;
+  font-weight: normal;
+}
+
+#content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-menu-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--color-verde-base);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 15px;
+  display: none;
+  align-items: center;
+}
+
+#sidebar.collapsed-sidebar ~ #content .top-menu-toggle-btn {
+  display: inline-block;
+}
+
+.top-sub-bar {
+  padding: 18px 25px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.grafismo-bg-header {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 450px;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image: url("/fotos/grafismo.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 50%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 50%
+  );
+}
+
+.curso-title-label {
+  font-weight: bold;
+  color: var(--mod-active-color);
+  font-size: 17px !important;
+  margin-bottom: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.links-superior {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.links-superior a {
+  color: var(--mod-active-color) !important;
+  font-size: 16px !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.links-superior a:hover {
+  text-decoration: underline;
+}
+
+.page-title-bar {
+  padding: 15px 25px;
+  border-bottom: 3px solid var(--mod-active-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f8fafc;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease;
+  gap: 20px;
+}
+
+.page-title-bar h2 {
+  margin: 0;
+  font-size: 24px !important;
+  color: var(--mod-active-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.page-counter {
+  white-space: nowrap;
+  font-size: 12px !important;
+  color: var(--mod-active-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.scrollable-content-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+  background-color: #fbf9f5;
+}
+
+.main-body-content {
+  padding: 40px 70px;
+  max-width: 1150px;
+  margin: 0 auto;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 30px;
+}
+
+.infografico-container {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  line-height: 1.6;
+}
+
+.card-visual-destaque,
+.questao-card,
+.reflexao-box,
+.personagem-card,
+.objetivo-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  line-height: 1.6;
+}
+
+.objetivo-box-logo {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo-apresentacao-container {
+  flex-shrink: 0;
+  max-width: 140px;
+}
+
+.logo-apresentacao-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.objetivo-box h4 {
+  margin-bottom: 12px !important;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.objetivo-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.nav-side-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 100px;
+  background-color: var(--mod-active-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  font-size: 24px;
+  transition: background-color 0.3s ease, opacity 0.2s;
+}
+
+.nav-side-btn:hover {
+  opacity: 0.9;
+}
+
+.nav-side-btn.disabled {
+  background-color: #d1d5db !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.nav-prev-bubble {
+  left: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.nav-next-bubble {
+  right: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.personagem-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.personagem-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.personagem-img {
+  width: 120px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.personagem-info h4 {
+  margin-top: 0;
+  color: var(--mod-active-color);
+  font-size: 21px !important;
+}
+
+.infografico-circulo-wrapper {
+  position: relative;
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.circulo-central-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #b5a43b;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.btn-infox {
+  background-color: #0f4c5c;
+  color: #ffffff;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-size: 18px !important;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.btn-infox:hover {
+  background-color: var(--mod-active-color);
+  color: #ffffff;
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px;
+    max-width: 85vw;
+    height: 100vh;
+    margin-left: -100%;
+    z-index: 2000;
+  }
+
+  #sidebar.open-mobile {
+    margin-left: 0;
+  }
+
+  #content {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .top-menu-toggle-btn {
+    display: inline-block !important;
+  }
+
+  .main-body-content {
+    padding: 30px 20px;
+  }
+
+  .personagem-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-side-btn {
+    position: fixed;
+    top: 50%;
+    height: 70px;
+    width: 35px;
+    font-size: 18px;
+    z-index: 2500;
+  }
+}
+
+
+
+/* ==========================================================================
+   NOVAS CLASSES DE SUPORTE PARA O PAINEL DE PROGRESSO (SEM INLINE NO JS)
+   ========================================================================== */
+
+.progresso-barra-wrapper {
+  background: #e2e8f0;
+  border-radius: 4px;
+  height: 28px;
+  width: 100%;
+  margin-bottom: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progresso-barra-fill {
+  background: var(--mod-active-color);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: width 0.4s ease;
+}
+
+.progresso-card-item {
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.progresso-card-item.pendente {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+}
+
+.progresso-card-item.concluido {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.progresso-card-modulo-item {
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.progresso-card-modulo-item.pendente {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.progresso-card-modulo-item.concluido {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.progresso-modulo-box-titulo {
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.progresso-modulo-container {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   NOVAS CLASSES SUPLEMENTARES PARA ISOLAR O ESTILO INLINE DO JS
+   ========================================================================== */
+
+.progresso-titulo-principal {
+  margin-top: 0;
+}
+
+.progresso-barra-fill-dinamica {
+  background: var(--mod-active-color);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: width 0.4s ease;
+}
+
+.cabecalho-modulo-secundario {
+  font-size: 18px !important;
+  font-weight: normal;
+  margin-bottom: 2px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.cabecalho-pagina-destaque {
+  font-size: 22px !important;
+  font-weight: bold;
+  color: var(--mod-active-color);
+  text-transform: none !important;
+}
+
+.estrutura-accordion-grupo {
+  margin-top: 20px;
+}
+
+.estrutura-panel-item {
+  border: none;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.estrutura-panel-heading-mod1 {
+  background: var(--mod1-color) !important;
+  padding: 0;
+  border-radius: 6px;
+  border: none;
+}
+
+.estrutura-panel-title-reset {
+  margin: 0;
+}
+
+.estrutura-link-sanfona {
+  color: #ffffff !important;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.estrutura-icone-mais {
+  margin-right: 15px;
+  font-size: 13px;
+}
+
+.estrutura-icone-mais-mod2 {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.estrutura-panel-corpo {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-top: none;
+  padding: 20px;
+}
+
+.estrutura-hr-divisor {
+  border-top: 1px solid #cbd5e1;
+  text-transform: none !important;
+}
+
+.territorio-bloco-central {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.territorio-legenda-topo {
+  text-align: center;
+  margin-top: 12px;
+  color: #555;
+  font-weight: normal !important;
+}
+
+.territorio-img-padrao {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.territorio-legenda-base {
+  text-align: center;
+  margin-top: 12px;
+  color: #555;
+  font-weight: normal !important;
+}
+
+.territorio-infografico-wrapper {
+  max-width: 850px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.territorio-btn-hotspot {
+  position: absolute;
+  background: rgba(0,0,0,0);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.territorio-spot-1 { top: 5.5%; left: 36.5%; width: 27.5%; height: 13%; }
+.territorio-spot-2 { top: 28%; left: 8.5%; width: 26%; height: 12.5%; }
+.territorio-spot-3 { top: 26.5%; left: 65.5%; width: 26%; height: 12.5%; }
+.territorio-spot-4 { top: 61.5%; left: 8.5%; width: 26%; height: 12.5%; }
+.territorio-spot-5 { top: 61%; left: 65.5%; width: 26%; height: 12.5%; }
+
+
+.panel-title .estrutura-panel-title-reset {
+    background-color: #ffffff !important;
+}
+
+/* ==========================================================================
+   CORREÇÃO DEFINITIVA PARA TODOS OS ACORDEÕES DE MÓDULOS (1, 2, 3 e 4)
+   ========================================================================== */
+
+/* Força o fundo verde escuro em QUALQUER cabeçalho de painel dentro do grupo da estrutura */
+#accordionEstruturaCurso .panel-heading,
+.estrutura-panel-heading-mod1,
+.panel-default > .panel-heading {
+  background-color: var(--mod1-color) !important;
+  border-color: none !important;
+  padding: 0 !important;
+  border-radius: 6px;
+}
+
+/* Força a cor branca para todos os textos, links e ícones dentro dos cabeçalhos dos módulos */
+#accordionEstruturaCurso .panel-title a,
+#accordionEstruturaCurso .panel-title span,
+#accordionEstruturaCurso .panel-title i,
+.estrutura-link-sanfona,
+.estrutura-link-sanfona span,
+.estrutura-link-sanfona i {
+  color: #ffffff !important;
+  text-decoration: none !important;
+
+}
+
+/* Estilização correta do corpo do acordeão quando aberto */
+.estrutura-panel-corpo {
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1;
+  border-top: none;
+  padding: 20px;
+}
+
+.estrutura-panel-corpo p, 
+.estrutura-panel-corpo li {
+  color: #334155 !important;
+  text-transform: none !important;
+}
+
+
+.personagens-panel-moldura {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.personagens-panel-cabecalho {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.personagens-link-toggle {
+  color: #000000 !important;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px !important;
+}
+
+.personagens-span-titulo {
+  color: var(--mod-active-color) !important;
+  font-size: 16px !important;
+}
+
+.personagens-panel-corpo {
+  background: #f8fafc;
+  border-top: 1px;
+  padding: 25px;
+}
+
+.personagem-card-custom {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+
+.personagem-card-ultimo {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.personagem-img-redonda {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.personagem-titulo-margem {
+  margin-top: 0;
+}
+
+.objetivo-titulo-padrao {
+  margin-top: 0;
+  color: var(--mod-active-color);
+}
+
+.objetivo-paragrafo-limpo {
+  margin: 0;
+}
+
+.pergunta-icone-espacamento {
+  margin-right: 10px;
+}
+
+.icone-nav-custom {
+  font-size: 24px;
+  opacity: 0.9;
+}
+
+.progresso-icone-concluido {
+  color: #059669;
+  font-size: 20px;
+}
+
+.progresso-icone-pendente {
+  color: #cbd5e1;
+  font-size: 20px;
+}
+
+.progresso-icone-mod-concluido {
+  color: #059669;
+  font-size: 20px;
+}
+
+.progresso-icone-mod-pendente {
+  color: #cbd5e1;
+  font-size: 20px;
+}
+
+.progresso-modulo-bloco-espacamento {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   AJUSTES RESPONSIVOS COMPLETOS PARA CELULARES (Telas até 991px)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px;
+    max-width: 85vw;
+    height: 100vh;
+    margin-left: -100%;
+    z-index: 2000;
+  }
+
+  #sidebar.open-mobile {
+    margin-left: 0;
+  }
+
+  #content {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .top-menu-toggle-btn {
+    display: inline-block !important;
+  }
+
+  /* Garante um respiro excelente nas laterais do texto no celular */
+  .main-body-content {
+    padding: 25px 22px !important;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  /* Ajusta as caixas e imagens para nunca estourarem a largura da tela */
+  .caixa-pergunta-imagem,
+  .infografico-container,
+  .pergunta-desafio-box {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Ajusta o padding interno da caixa de pergunta para o texto não ficar sob o desenho */
+  .caixa-pergunta-imagem {
+    padding: 140px 18px 20px 18px !important;
+    background-size: 100% 100%;
+  }
+
+  /* Transforma os botões laterais flutuantes em uma barra inferior fixa no celular, 
+     evitando que eles tampem o texto! */
+  .nav-side-btn {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    width: 50% !important;
+    height: 50px;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 2500;
+  }
+
+  .nav-prev-bubble {
+    left: 0;
+    border-radius: 0;
+  }
+
+  .nav-next-bubble {
+    right: 0;
+    border-radius: 0;
+  }
+
+  /* Ajuste para os cards de personagens */
+  .personagem-card,
+  .personagem-card-custom,
+  .personagem-card-ultimo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /* Empilha a logo e o texto do objetivo geral verticalmente no celular */
+  .objetivo-box-logo {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    padding: 20px 15px !important;
+  }
+
+  /* Deixa a logo com um tamanho ideal e centralizada */
+  .logo-apresentacao-container {
+    max-width: 110px !important;
+    margin: 0 auto;
+  }
+
+  /* Ajusta o alinhamento e o tamanho da fonte do texto do objetivo no mobile */
+  .objetivo-conteudo {
+    width: 100% !important;
+    text-align: justify !important; /* Mantém o alinhamento justificado ou center se preferir */
+  }
+
+  .objetivo-conteudo h4 {
+    text-align: center !important;
+    margin-bottom: 10px !important;
+  }
+
+}
+
+.panel-title.estrutura-panel-title-reset {
+     background-color: #f5f5f5 !important;
+     text-decoration: none;
+     border: none;
+     box-sizing: border-box;
+     padding: 15px 20px;
+     border-radius: 6px;
+     font-size: 18px !important;
+}
+
+
+#accordionEstruturaCurso .panel-default > .panel-heading,
+#accordionEstruturaCurso .panel-heading.estrutura-panel-heading-mod1 {
+    background-color: var(--color-verde-base) !important;
+    background: var(--color-verde-base) !important; /* Garante que nenhum gradiente sobrescreva */
+}
+
+
+
+/* 
+//-------------------------------------// 
+DESIGNER CURRICULO LIDER*/
+ .curriculo-lider-limpo {
+  margin: 30px 0;
+}
+
+.curriculo-lider-limpo h3 {
+  color: var(var(--mod-active-color));
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Deixa a foto à esquerda e o texto à direita */
+.lider-flex-wrapper {
+  display: flex;
+  align-items: flex-start; /* Alinha o texto com o topo da foto */
+  gap: 25px; /* Espaço entre a foto e o texto */
+}
+
+/* Estilização da foto com cantos arredondados (sem ser redonda) */
+.lider-curso-container img {
+  width: 180px;       /* Largura fixa ajustada */
+  height: auto;       /* Mantém a proporção original da foto */
+  max-height: 220px;
+  object-fit: cover;  
+  border-radius: 8px; /* Cantos levemente arredondados */
+  border: 2px solid var(--mod-active-color);
+  flex-shrink: 0;
+}
+
+.lider-texto-info h4 {
+  margin-top: 0;
+  color: #1e293b;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.lider-texto-info p {
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* No celular, empilha a foto em cima e o texto embaixo para ficar responsivo */
+@media (max-width: 768px) {
+  .lider-flex-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .lider-curso-container img {
+    width: 150px;
+  }
+}
+
+
+/* PARA PENSAR */
+.caixa-para-pensar {
+  background: #f8fafc;
+  border-left: 5px solid var(--mod-active-color, #115E53); /* Borda lateral colorida conforme o módulo */
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0 12px 12px 0;
+  margin: 35px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.para-pensar-header {
+  background: rgba(17, 94, 83, 0.08); /* Fundo sutil derivado */
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--mod-active-color, #115E53);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.para-pensar-header i {
+  font-size: 20px;
+}
+
+.para-pensar-body {
+  padding: 20px 25px;
+}
+
+.para-pensar-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.para-pensar-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.para-pensar-lista li:last-child {
+  margin-bottom: 0;
+}
+
+/* Indicador numérico elegante para as questões reflexivas */
+.quest-numero {
+  background: var(--mod-active-color, #115E53);
+  color: #ffffff;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.para-pensar-lista p {
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .para-pensar-body {
+    padding: 15px;
+  }
+  .para-pensar-lista p {
+    font-size: 15px;
+  }
+}
+
+
+/* Modelos de caixas */
+
+.caixa-tematica {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 5px solid var(--mod-active-color, #115E53); /* Borda lateral baseada na cor do módulo */
+  border-radius: 8px;
+  margin: 30px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.caixa-tematica-header {
+  background: rgba(17, 94, 83, 0.05); /* Fundo sutil para o cabeçalho */
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.caixa-tematica-icone {
+  background: var(--mod-active-color, #115E53);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.caixa-tematica-titulos {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitulo-categoria {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--mod-active-color, #115E53);
+  margin-bottom: 2px;
+}
+
+.caixa-tematica-titulos h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.caixa-tematica-body {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.caixa-tematica-conteudo-texto {
+  flex: 1; /* Ocupa o espaço principal do texto */
+}
+
+.caixa-tematica-conteudo-texto p {
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Espaço reservado para a imagem / ícone ilustrativo ao lado */
+.caixa-tematica-imagem-slot {
+  width: 100px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.caixa-tematica-imagem-slot img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Responsividade para celulares (empilha o texto e o espaço da imagem se necessário) */
+@media (max-width: 768px) {
+  .caixa-tematica-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .caixa-tematica-imagem-slot {
+    align-self: center;
+    margin-top: 10px;
+  }
+}
+
+/* Animação de pulsar / piscar suave para a imagem lateral */
+@keyframes pulsar-imagem-lateral {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 0 rgba(17, 94, 83, 0));
+  }
+  50% {
+    transform: scale(1.06); /* Aumenta levemente de tamanho */
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 8px rgba(17, 94, 83, 0.3)); /* Cria uma sombra brilhante ao redor */
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 0 rgba(17, 94, 83, 0));
+  }
+}
+
+/* Classe que aplica o efeito piscando na imagem do slot */
+.caixa-tematica-imagem-slot img.piscando {
+  animation: pulsar-imagem-lateral 2s infinite ease-in-out;
+}
+
+
+/* ==========================================================================
+   ESTILOS - CAPA DE VÍDEO SIMULADA (DEMONSTRAÇÃO)
+   ========================================================================== */
+
+.caixa-video-curso {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 5px solid var(--mod-active-color, #115E53);
+  border-radius: 8px;
+  margin: 35px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.caixa-video-header {
+  background: rgba(17, 94, 83, 0.05);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.caixa-video-icone {
+  background: var(--mod-active-color, #115E53);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.caixa-video-titulos {
+  display: flex;
+  flex-direction: column;
+}
+
+.caixa-video-curso .subtitulo-categoria {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--mod-active-color, #115E53);
+  margin-bottom: 2px;
+}
+
+.caixa-video-titulos h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.caixa-video-body {
+  padding: 20px;
+}
+
+/* Container da capa simulada mantendo a proporção 16:9 */
+.video-capa-demo {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  background: #000000;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-capa-demo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom suave na imagem ao passar o mouse */
+.video-capa-demo:hover img {
+  transform: scale(1.03);
+}
+
+/* Botão de Play centralizado com a cor dinâmica do módulo */
+.botao-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: var(--mod-active-color, #115E53);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding-left: 4px; /* Ajuste visual leve para centralizar perfeitamente o ícone de play */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efeito de crescer o botão ao passar o mouse */
+.video-capa-demo:hover .botao-play-overlay {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-legenda-apoio {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  .caixa-video-body {
+    padding: 15px;
+  }
+  .botao-play-overlay {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+}
+
+/* REFERÊNCIAS  */
+
+/* ==========================================================================
+   ESTILOS - LISTA DE REFERÊNCIAS
+   ========================================================================== */
+
+.lista-referencias-curso {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.referencia-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--mod-active-color, #115E53); /* Acompanha a cor ativa do módulo */
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.ref-icone {
+  background: rgba(17, 94, 83, 0.1);
+  color: var(--mod-active-color, #115E53);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ref-conteudo p {
+  margin: 0;
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.ref-conteudo a {
+  color: var(--mod-active-color, #115E53);
+  text-decoration: underline;
+}
+
+/* E-BOOKS */
+/* ==========================================================================
+   ESTILOS - REPOSITÓRIO DE E-BOOKS (PDF)
+   ========================================================================== */
+
+.repositorio-ebooks {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 5px solid var(--mod-active-color, #115E53); /* Borda lateral dinâmica conforme o módulo */
+  border-radius: 8px;
+  margin: 35px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.repositorio-header {
+  background: rgba(17, 94, 83, 0.05);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.repositorio-icone {
+  background: var(--mod-active-color, #115E53);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.repositorio-titulos {
+  display: flex;
+  flex-direction: column;
+}
+
+.repositorio-ebooks .subtitulo-categoria {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--mod-active-color, #115E53);
+  margin-bottom: 2px;
+}
+
+.repositorio-titulos h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Grid de E-books (lado a lado no PC, empilhado no celular) */
+.repositorio-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card individual do E-book */
+.ebook-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ebook-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Capa e Badge */
+.ebook-capa {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.ebook-capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ebook-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e11d48; /* Vermelho padrão para arquivos PDF */
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Informações do E-book */
+.ebook-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ebook-info h5 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.ebook-info p {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Detalhes (páginas e tamanho) */
+.ebook-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 15px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 10px;
+}
+
+.ebook-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Botão de Download dinâmico */
+.btn-download-ebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--mod-active-color, #115E53);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-download-ebook:hover {
+  opacity: 0.9;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  .repositorio-grid {
+    padding: 15px;
+  }
+}
+
+.caixa-tematica-imagem-slot_2 {
+  width: 80px;
+  flex-shrink: 0;
+  
+}
+
+.caixa-tematica-imagem-slot_2 img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 6px;
+}
