@@ -35,7 +35,7 @@ const secoesCurso = [
 
                     <div class="objetivo-box-logo">
                         <div class="logo-apresentacao-container">
-                            <img src="./fotos/logo2.png" alt="Logo do Curso" onerror="this.src='./fotos/image.png';">
+                            <img src="./fotos/logo2.jpg" alt="Logo do Curso" onerror="this.src='./fotos/image.png';">
                         </div>
                         <div class="objetivo-conteudo">
                             <h4 class="objetivo-titulo-destaque">Objetivo geral</h4>
