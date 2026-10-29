@@ -1272,10 +1272,11 @@ DESIGNER CURRICULO LIDER*/
 .caixa-tematica-titulos {
   display: flex;
   flex-direction: column;
+
 }
 
 .subtitulo-categoria {
-  font-size: 12px;
+  font-size: 25px !important;
   font-weight: 800;
   letter-spacing: 0.5px;
   color: var(--mod-active-color, #115E53);
@@ -1284,7 +1285,7 @@ DESIGNER CURRICULO LIDER*/
 
 .caixa-tematica-titulos h4 {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px !important;
   font-weight: bold;
   color: #1e293b;
 }
@@ -1302,7 +1303,7 @@ DESIGNER CURRICULO LIDER*/
 
 .caixa-tematica-conteudo-texto p {
   color: #334155;
-  font-size: 16px;
+  font-size: 16px!important;
   line-height: 1.6;
   margin: 0;
 }
