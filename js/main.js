@@ -337,7 +337,7 @@ const secoesCurso = [
 <div class="caixa-tematica atencao-rota">
     <div class="caixa-tematica-header">
         <div class="caixa-tematica-titulos">
-            <span class="subtitulo-categoria">ATENÇÃO À ROTA</span>
+            <span class="subtitulo-categoria">ATENÇÃO</span>
             <h4>Informações essenciais para seguir com segurança</h4>
         </div>
     </div>
@@ -346,7 +346,7 @@ const secoesCurso = [
             <p>Insira aqui o texto principal com as informações cruciais que o aluno precisa saber para avançar com segurança no conteúdo.</p>
         </div>
         <div class="caixa-tematica-imagem-slot">
-            <img src="./fotos/importante.png" alt="Ilustração do bloco" class="piscando" onerror="this.style.display='none';">
+            <img src="./fotos/sirene.png" alt="Ilustração do bloco" class="piscando" onerror="this.style.display='none';">
         </div>
     </div>
 </div>
@@ -358,7 +358,7 @@ const secoesCurso = [
 <div class="caixa-tematica alem-margem">
     <div class="caixa-tematica-header">
         <div class="caixa-tematica-titulos">
-            <span class="subtitulo-categoria">ALÉM DA MARGEM</span>
+            <span class="subtitulo-categoria">Saiba Mais</span>
             <h4>Conteúdos para ampliar e aprofundar o percurso</h4>
         </div>
     </div>
@@ -379,7 +379,7 @@ const secoesCurso = [
 <div class="caixa-tematica um-norte">
     <div class="caixa-tematica-header">
         <div class="caixa-tematica-titulos">
-            <span class="subtitulo-categoria">UM NORTE PARA A PRÁTICA</span>
+            <span class="subtitulo-categoria">Dica</span>
             <h4>Orientações que podem apoiar sua atuação</h4>
         </div>
     </div>
@@ -388,7 +388,7 @@ const secoesCurso = [
             <p>Insira aqui orientações práticas, dicas de manejo ou reflexões voltadas diretamente ao cotidiano de atuação profissional.</p>
         </div>
         <div class="caixa-tematica-imagem-slot">
-            <img src="./fotos/estrela.png" alt="Ilustração do bloco" class="piscando" onerror="this.style.display='none';">
+            <img src="./fotos/norte.png" alt="Ilustração do bloco" class="piscando" onerror="this.style.display='none';">
         </div>
     </div>
 </div>
@@ -400,7 +400,7 @@ const secoesCurso = [
 <div class="caixa-tematica para-ampliar">
     <div class="caixa-tematica-header">
         <div class="caixa-tematica-titulos">
-            <span class="subtitulo-categoria">PARA AMPLIAR O HORIZONTE</span>
+            <span class="subtitulo-categoria">Leitura</span>
             <h4>Leituras e materiais para continuar a travessia</h4>
         </div>
     </div>
